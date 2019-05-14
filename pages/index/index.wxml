@@ -1,5 +1,5 @@
 <!--index.wxml-->
-<view class="container">
+<!-- <view class="container">
   <view class="userinfo">
     <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
     <block wx:else>
@@ -10,4 +10,34 @@
   <view class="usermotto">
     <text class="user-motto">{{motto}}</text>
   </view>
+</view> -->
+<view class="index_con">
+	<view class="index_top_bkg">
+		<image src="/images/main.png"></image>
+	</view> 
+	<view class='index_menu'>
+		<view class='menu_item'>
+			<image></image>
+			<text>佳禾服务</text>
+		</view>
+		<view class='menu_item'>
+			<image></image>
+			<text>高单发布</text>
+		</view>
+		<view class='menu_item'>
+			<image></image>
+			<text>课程介绍</text>
+		</view>
+	</view>
+	<view class='index_mid_con'>
+		
+	</view>
+
 </view>
+
+
+
+
+
+
+

@@ -1,32 +1,31 @@
 {
-  "pages":[
-    "pages/index/index",
+	"pages": [
+		"pages/index/index",
 		"pages/server/index",
 		"pages/find/index",
-    "pages/logs/logs"
-  ],
-  "window":{
-    "backgroundTextStyle":"light",
-    "navigationBarBackgroundColor": "#ea970a",
-    "navigationBarTitleText": "",
-    "navigationBarTextStyle":"black"
-  },
-	"tabBar":{
-		"color":"#2c2c2c",
-		"selectedColor":"#ea970a",
-		"list":[
+		"pages/logs/logs"
+	],
+	"window": {
+		"backgroundTextStyle": "light",
+		"navigationBarBackgroundColor": "#ea970a",
+		"navigationBarTitleText": "",
+		"navigationBarTextStyle": "black"
+	},
+	"tabBar": {
+		"color": "#2c2c2c",
+		"selectedColor": "#ea970a",
+		"list": [
 			{
-				"pagePath":"pages/index/index",
-				"text":"首页",
-				"iconPath":"images/home.png",
-				"selectedIconPath":"images/home_selected.png"
+				"pagePath": "pages/index/index",
+				"text": "首页",
+				"iconPath": "images/home.png",
+				"selectedIconPath": "images/home_selected.png"
 			},
 			{
 				"pagePath": "pages/index/index",
 				"text": "佳禾服务",
-				"iconPath":"images/server.png",
+				"iconPath": "images/server.png",
 				"selectedIconPath": "images/server_selected.png"
-
 			},
 			{
 				"pagePath": "pages/index/index",
@@ -35,6 +34,6 @@
 				"selectedIconPath": "images/ay_selected.png"
 			}
 		]
-	}
-
+	},
+	"sitemapLocation": "sitemap.json"
 }
