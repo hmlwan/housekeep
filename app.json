@@ -9,7 +9,8 @@
 		"backgroundTextStyle": "light",
 		"navigationBarBackgroundColor": "#ea970a",
 		"navigationBarTitleText": "",
-		"navigationBarTextStyle": "black"
+		"navigationBarTextStyle": "black",
+		"backgroundColor":"#ea970a"
 	},
 	"tabBar": {
 		"color": "#2c2c2c",
