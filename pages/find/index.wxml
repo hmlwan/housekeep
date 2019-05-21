@@ -1,2 +1,53 @@
-<!--pages/find/index.wxml-->
-<text>pages/find/index.wxml</text>
+<!--头部logo-->
+<view class="top_logo">
+	<image class="l_logo" src='/images/find/logo.png'></image>
+
+	<image class='r_logo_icon' src= '/images/find/daohang.png'></image>
+</view>
+<!-- 头图 -->
+<view class="top_bgk">
+	<image src='/images/find/yuyue_top.jpg'></image>
+</view>
+<!-- 标题 -->
+<view class="top_title">
+	<text>8000+家庭的口碑见证</text>
+	<text>每一幅温馨的画面,每一句真诚的赞赏,每一个幸福的笑容,都是我们温柔前进的动力,也是佳禾珍贵的财富。</text>
+</view>
+<!-- 评价 -->
+<view class='pinlun_list'>
+	 <image src='/images/find/pinlun_1.jpg'></image>
+	 <image src='/images/find/pinlun_2.jpg'></image>
+	 <image src='/images/find/pinlun_3.jpg'></image>
+</view>
+<!-- 在线选阿姨 -->
+<view class='choice_ayi'>
+		<text class='choice_title'>在线选阿姨</text>
+		<view class='job_type_con'>
+				<text>工作类型</text>
+				<view class='job_type_item'>
+						<text>全部</text>
+						<text>育婴师</text>
+						<text>月嫂</text>
+						<text>保姆</text>
+						<text>管家</text>
+						<text>家庭早教师</text>
+						<text>菲佣</text>
+				</view>
+		</view>
+		<view class="jober_list">
+				<view class="jober_item">
+						<image src='/images/find/ayi_1.jpg'></image>
+						 <view class='ayi_detail'>
+						 		<text class='name'>陈阿姨</text>
+								<text class='address'>1986年 | 湖北人 | 属虎</text>
+								<text class='years'>3-5年</text>
+						 </view>
+						 <view class='ayi_exp'>
+						 		<text class="cert">资质证书：身份证/健康证/高级育婴证/早教证/小儿推拿证/厨师证/高级管家证</text>
+								<text class='work_addr'>2014-2016  上海   江苏家庭  4口之家  100平方  专带10个月宝宝</text>
+								<text class='work_addr'>2016-2017  上海  上海家庭  3口之家  90平方    专带1岁宝宝</text>	
+						 </view>
+				</view>
+		</view>
+</view>
+
