@@ -52,17 +52,101 @@
 }
 /* 在线选阿姨 */
 .choice_ayi{
-	display: flex;
-	flex-direction: column;
-	background-color: #f5f5f5;
-	width: 100%;
-	align-items: center;
+		display: flex;
+		flex-direction: column;
+		background-color: #f5f5f5;
+		width: 100%;
+		align-items: center;
 }
 .choice_ayi .choice_title{
-	font-size: 40rpx;
-	font-weight: bold;
-	padding: 50rpx 0;
+		font-size: 40rpx;
+		font-weight: bold;
+		padding: 50rpx 0;
 }
+
+.choice_con{
+		margin: o auto;
+		width: 92%;
+
+}
+.choice_con .job_type_con{
+		background-color: #ffffff;
+		font-size: 30rpx;
+		padding: 20rpx 0 30rpx 15rpx;
+		margin-bottom: 35rpx
+}
+.job_type_con .job_type_title{
+	 font-size: 35rpx;
+	 font-weight: bold;
+	
+ }
+.job_type_con .job_type_item {
+	  padding-top: 20rpx;
+		display: flex;
+	  flex-wrap:wrap;
+		flex-grow:4
+	}
+.job_type_item  text{
+		padding: 15rpx 25rpx;
+		font-size:28rpx; 
+}
+/* 选择状态 */
+.active{
+	background-color: #ff8900;
+	color:#ffffff;
+}
+/* 工作经验 */
+.jober_list{
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+	
+}
+.jober_list image{
+		width: 100%;
+		height:550rpx;
+}
+.jober_list .jober_item{
+		display: flex;
+		flex-direction: column;
+		font-size: 28rpx;
+		margin-bottom: 20rpx;
+		background-color: #ffffff
+}
+.jober_list .ayi_detail{
+		display: flex;
+		flex-direction: column;
+		color:#666666;
+		padding-left:20rpx;
+		padding-bottom: 20rpx;
+}
+.ayi_detail text{
+		padding-top:15rpx 
+}
+.ayi_detail .name{
+		font-size: 35rpx;
+		color:#000
+}
+.jober_list .ayi_exp{
+		color:#666666;
+		padding:0 20rpx 30rpx;
+		display: flex;
+		flex-direction: column;
+		line-height: 50rpx
+}
+.detail_button{
+		width: 86%;
+		padding:20rpx 20rpx;
+		text-align: center;
+		margin: 0 auto;
+		border: #e6454a 1px solid;
+		color:#e6454a;
+		font-size: 32rpx;
+		margin-bottom: 40rpx;
+
+}
+
+
 
 
 

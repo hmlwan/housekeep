@@ -1,6 +1,10 @@
 // pages/find/index.js
-Page({
 
+Page({
+	msgHandler(e) {
+		console.log(e.detail.data) //我是网页，获取到来自也页面的数据
+	},
+	
 	/**
 	 * 页面的初始数据
 	 */
