@@ -65,7 +65,95 @@
 							<view class="detail_button">了解详情</view>
 					</view>
 			</view>
+		</view>	
+		<view class="load_more">加载更多</view>
+</view>
+
+<!-- 家务助理 -->
+<view class='bjws'>
+		<view class="bjws_top">
+				<text class="bjws_title">佳禾家务助理-家庭保洁卫士</text>
+				<text class='bjws_desc desc'>负责买菜、家庭管理合理安排家庭生活、打扫家庭卫生、清洗、晾晒、熨烫、整理衣物、宠物照料</text>
+				<image src="/images/find/baojie.jpg"></image>
 		</view>
-	
+		<view class='bjws_cont'>
+				<text>每天用专用抹布进行无死角清洁。</text>
+				<text>整理家中杂物，保持居室整洁、干净、有秩序。</text>
+				<text>每天清洁厨房，保持清洁、无油污。</text>
+				<text>床单及窗帘每月清洗。</text>
+				<text>专项擦洗地面，仔细分区。</text>
+		</view>
+	<!-- 孩子的成长 -->
+		<view class='hzcz flex_col'>
+				<text class="hzcz_title title">佳禾家务助理-孩子的成长督导</text>
+				<text class='hzcz_desc desc'>护送孩子上下学，让孩子身边多一份关爱和陪伴！</text>
+				<view class='hzcz_bgk flex_row'>
+						<image src='/images/find/help_1.png'></image>
+						<image src='/images/find/help_2.png'></image>
+						<image src='/images/find/help_3.png'></image>
+				</view>	
+		</view>
+	<!--家庭御厨  -->
+		<view class='jtyc flex_col'>
+				<text class='jtyc_title title'>佳禾家务助理-家庭御厨</text>
+				<text class='jtyc_desc desc'>照料全体家人的日常饮食，根据季节变化，饮食口味及时调节菜谱，做您的家庭厨师</text>
+				<text class='jtyc_con'>合理安排生活日常开支，注重荤素搭配，营养搭配。</text>
+				<text class='jtyc_con'>勤俭持家。连买菜都秉承经济，实惠，物美的原则。</text>
+				<text class='jtyc_con'>家中所购买物品及时分类、保险、科学储存、避免浪费。</text>
+				<image src='/images/find/yuchu.jpg'></image>
+		</view>
+</view>
+
+<!-- 特色服务 -->
+<view class='spec_con'>
+		<view class='spec_top flex_col'>
+				<text class='title'>特色服务内容</text>
+				<text class='desc'>帮助妈妈安全科学育儿</text>
+		</view>
+		<view class='spec_bgk flex_row'>
+				<view class='spec_item flex_col'>
+						<image src='/images/find/baby_1.png'></image>
+						<text>起居照顾</text>
+				</view>
+				<view class='spec_item flex_col'>
+						<image src='/images/find/baby_1.png'></image>
+						<text>起居照顾1</text>
+				</view>
+					<view class='spec_item flex_col'>
+						<image src='/images/find/baby_1.png'></image>
+						<text>起居照顾3</text>
+				</view>
+					<view class='spec_item flex_col'>
+						<image src='/images/find/baby_1.png'></image>
+						<text>起居照顾4</text>
+				</view>
+		</view>
+</view>
+<!-- 联系我们 -->
+<view class='lx flex_col'>
+		<text class='lx_head'>联系我们</text>
+		<text class='desc'>24小时服务热线</text>
+		<text class='lx_phone'>400-808-3353</text>
+		<text class='desc'>总部地址：上海市徐汇区徐虹北路3号2楼</text>
+		<image src="/images/find/wechat01.jpg"></image>
+		<text class='lx_head'>立即预约</text>
+		<form bindsubmit="" bindreset="">
+				<view class='input-form flex_row'>
+						<label>姓名：</label>
+						<input class='form-control' type="text"></input>				
+				</view>
+				<view class='input-form flex_row'>
+						<label>电话：</label>
+						<input class='form-control' type="text"></input>
+				</view>
+				<button>提交</button>
+		</form>
+</view>
+<!-- 呵护 -->
+<view class='hehu_bgk'  style="background:url('/images/find/h-footer-bg.jpg')">
+		<text>佳禾用爱呵护 · 关爱千万家！</text>
+		<text>我们秉承服务客户的理念，时刻关注现代家庭的个性化需求，</text>
+		<text>把客户需求放在首位，用我们真诚、爱心，为您提供贴心的家政服务，</text>
+		<text>让我们的理念如阳光照耀每一个家庭。</text>
 </view>
 
