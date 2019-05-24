@@ -1,31 +1,3 @@
-/* pages/find/index.wxss */
-.flex_col{
-		display: flex;
-		flex-direction: column
-}
-.flex_row{
-	display: flex;
-	flex-direction: row
-}
-
-.top_logo{
-		display: flex;
-	  flex-direction: row;
-		width: 100%;
-		height: 120rpx;
-	  justify-content: space-between;
-		align-items: center;
-}
-.top_logo .l_logo{
-		height: 80rpx;
-		width: 50%;
-		margin-left:25rpx; 
-}
-.top_logo .r_logo_icon{
-		height: 80rpx;
-		width: 10%;
-		margin-right:25rpx; 
-}
 /* 背景图 */
 .top_bgk image{
 		width: 100%;
@@ -306,21 +278,23 @@ button{
 		background-color: #ff8900;
 		color:#ffffff;
 }
-.hehu_bgk{
-
-		font-size: 30rpx;
-		background: no-repeat;
-
-}
-
-
-
-.desc{
-		color:#666666;
-		padding: 20rpx 0;
+.hehu_bgk {
+		text-align: center;
+		color:#ffffff;
+		width: 100%;
 		font-size: 30rpx;
 }
-
+.hehu_bgk .hehu_con{
+		padding: 50rpx 20rpx;
+}
+.hehu_bgk text{
+		padding: 10rpx 0;
+}
+.hehu_bgk text:first-child{
+		font-size: 40rpx;
+		color:#ffa518;
+		font-weight: bold
+}
 
 
 

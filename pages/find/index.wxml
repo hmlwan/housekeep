@@ -1,7 +1,6 @@
 <!--头部logo-->
-<view class="top_logo">
+<view class="top_logo flex_row">
 	<image class="l_logo" src='/images/find/logo.png'></image>
-
 	<image class='r_logo_icon' src= '/images/find/daohang.png'></image>
 </view>
 <!-- 头图 -->
@@ -150,10 +149,25 @@
 		</form>
 </view>
 <!-- 呵护 -->
-<view class='hehu_bgk'  style="background:url('/images/find/h-footer-bg.jpg')">
-		<text>佳禾用爱呵护 · 关爱千万家！</text>
-		<text>我们秉承服务客户的理念，时刻关注现代家庭的个性化需求，</text>
-		<text>把客户需求放在首位，用我们真诚、爱心，为您提供贴心的家政服务，</text>
-		<text>让我们的理念如阳光照耀每一个家庭。</text>
+<view class='hehu_bgk'  style="background:url('/images/find/h-footer-bg.jpg') no-repeat;background-position: center;background-size:cover;">
+		<view class='hehu_con flex_col'>
+				<text>佳禾用爱呵护 · 关爱千万家！</text>
+				<text>我们秉承服务客户的理念，时刻关注现代家庭的个性化需求，</text>
+				<text>把客户需求放在首位，用我们真诚、爱心，为您提供贴心的家政服务，</text>
+				<text>让我们的理念如阳光照耀每一个家庭。</text>
+		</view>	
 </view>
-
+<!-- 站长统计 -->
+<view class='copyright flex_col'>
+		<text>Copyright © 2017 上海佳禾家庭服务有限公司 版权所有  沪ICP备12048079号</text>
+		<text>技术支持：雪中行者</text>
+</view>
+<!-- footer悬浮 -->
+<view class='footer_flex'>
+		<view class='footer_item flex_row'>
+				<image src='/images/find/001zx.png'></image>
+				<image src='/images/find/004zx.png'></image>
+				<image src='/images/find/003zx.png'></image>
+				<image src='/images/find/002zx.png'></image>
+		</view>
+</view>

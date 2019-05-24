@@ -1,0 +1,78 @@
+<!--阿姨详情-->
+<!--头部logo-->
+<view class="top_logo flex_row">
+	<image class="l_logo" src='/images/find/logo.png'></image>
+	<image class='r_logo_icon' src= '/images/find/daohang.png'></image>
+</view>
+
+<view class='detail_bkg'>
+			<view class='detail_con'>
+					<!-- 阿姨头像 -->
+					<view class='ayi_bgk flex_col'>
+							<image class='ayi_head' src='/images/detail/detail_1.jpg'></image>
+							<text class='ayi_name'>于阿姨</text>
+					</view>
+					<!-- 阿姨简历 -->
+					<view class='resume flex_row'>
+							<view class='resume_item'>
+									<label>资格证：</label>
+									<text>身份证/健康证/母婴护理证/高级育婴证/催乳师证/小儿推拿证/产后康复/营养月子餐证</text>
+							</view>
+							<view class='resume_item'>
+									<label>经验：</label>
+									<text>3年</text>
+							</view>
+							<view class='resume_item'>
+									<label>户籍：</label>
+									<text>上海</text>
+							</view>
+							<view class='resume_item'>
+									<label>语言能力：</label>
+									<text>普通话</text>
+							</view>
+							<view class='resume_item'>
+									<label>年龄：</label>
+									<text>42</text>
+							</view>
+							<view class='resume_item'>
+									<label>属相：</label>
+									<text>龙</text>
+							</view>
+							<view class='resume_item'>
+									<label>学历：</label>
+									<text>高中</text>
+							</view>
+							<view class='resume_item'>
+									<label>区域：</label>
+									<text>不限</text>
+							</view>
+					</view>
+		</view>
+</view>	
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 站长统计 -->
+<view class='copyright flex_col'>
+		<text>Copyright © 2017 上海佳禾家庭服务有限公司 版权所有  沪ICP备12048079号</text>
+		<text>技术支持：雪中行者</text>
+</view>
+<!-- footer悬浮 -->
+<view class='footer_flex'>
+		<view class='footer_item flex_row'>
+				<image src='/images/find/001zx.png'></image>
+				<image src='/images/find/004zx.png'></image>
+				<image src='/images/find/003zx.png'></image>
+				<image src='/images/find/002zx.png'></image>
+		</view>
+</view>
+

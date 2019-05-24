@@ -3,6 +3,7 @@
 		"pages/index/index",
 		"pages/server/index",
 		"pages/find/index",
+		"pages/detail/index",
 		"pages/logs/logs"
 	],
 	"window": {

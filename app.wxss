@@ -1,10 +1,58 @@
-/**app.wxss**/
-.container {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  padding: 200rpx 0;
-  box-sizing: border-box;
-} 
+/* 公共部分 */
+.flex_col{
+		display: flex;
+		flex-direction: column
+}
+.flex_row{
+	display: flex;
+	flex-direction: row
+}
+.desc{
+		color:#666666;
+		padding: 20rpx 0;
+		font-size: 30rpx;
+}
+/* logo部分 */
+.top_logo{
+	
+		width: 100%;
+		height: 120rpx;
+	  justify-content: space-between;
+		align-items: center;
+}
+.top_logo .l_logo{
+		height: 80rpx;
+		width: 50%;
+		margin-left:25rpx; 
+}
+.top_logo .r_logo_icon{
+		height: 80rpx;
+		width: 10%;
+		margin-right:25rpx; 
+}
+
+/* 站长统计 */
+.copyright{
+		background-color: #000;
+		color:#fff;
+		font-size: 30rpx;
+		padding: 40rpx 25rpx 200rpx;
+}
+.copyright text{
+		padding-top: 15rpx;
+}
+.footer_flex{
+		position: relative;
+}
+.footer_flex .footer_item{
+		position: fixed;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		width: 100%
+
+}
+.footer_item image{
+		width: 25%;
+		height: 100rpx;
+}
