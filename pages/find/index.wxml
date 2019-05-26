@@ -149,7 +149,8 @@
 		</form>
 </view>
 <!-- 呵护 -->
-<view class='hehu_bgk'  style="background:url('/images/find/h-footer-bg.jpg') no-repeat;background-position: center;background-size:cover;">
+<view>
+    <view class='hehu_bgk'  style="">
 		<view class='hehu_con flex_col'>
 				<text>佳禾用爱呵护 · 关爱千万家！</text>
 				<text>我们秉承服务客户的理念，时刻关注现代家庭的个性化需求，</text>
@@ -157,6 +158,9 @@
 				<text>让我们的理念如阳光照耀每一个家庭。</text>
 		</view>	
 </view>
+
+</view>
+
 <!-- 站长统计 -->
 <view class='copyright flex_col'>
 		<text>Copyright © 2017 上海佳禾家庭服务有限公司 版权所有  沪ICP备12048079号</text>

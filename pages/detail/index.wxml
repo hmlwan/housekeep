@@ -13,7 +13,7 @@
 							<text class='ayi_name'>于阿姨</text>
 					</view>
 					<!-- 阿姨简历 -->
-					<view class='resume flex_row'>
+					<view class='resume'>
 							<view class='resume_item'>
 									<label>资格证：</label>
 									<text>身份证/健康证/母婴护理证/高级育婴证/催乳师证/小儿推拿证/产后康复/营养月子餐证</text>
@@ -47,6 +47,24 @@
 									<text>不限</text>
 							</view>
 					</view>
+          <!-- 工作经历 -->
+          <view class='work flex_col clearfix'>
+              <view class='work_item flex_row'>
+                  <label>工作经历</label>
+                  <text>2017-2018 在上海某月子会所照顾新生儿</text>
+              </view>
+              <view class='work_item flex_row'>
+                  <label>专业技能</label>
+                  <text>做饭/保洁/照顾新生儿/抚触被动操</text>
+              </view>
+              <view class='work_item flex_row'>
+                  <label>自我评价</label>
+                  <text>阿姨从事月嫂育婴多年，实践操作经验丰厚，擅长辅助调理产妇心理，能合理安排月子期间的大小事宜。对紧急事件能做到妥善调谐，做事情认真，有责任心，爱心，懂得煲汤养生，推拿按摩。善于辅助产妇月子后的形体恢复，深受东家信赖好评。</text>
+              </view>
+          
+          
+          </view>
+
 		</view>
 </view>	
 
@@ -62,7 +80,7 @@
 
 
 <!-- 站长统计 -->
-<view class='copyright flex_col'>
+<view class='copyright flex_col '>
 		<text>Copyright © 2017 上海佳禾家庭服务有限公司 版权所有  沪ICP备12048079号</text>
 		<text>技术支持：雪中行者</text>
 </view>

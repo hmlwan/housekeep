@@ -12,6 +12,12 @@
 		padding: 20rpx 0;
 		font-size: 30rpx;
 }
+/* 清除浮动 */
+.clearfix{
+    clear: both;
+    content: ''
+}
+
 /* logo部分 */
 .top_logo{
 	
