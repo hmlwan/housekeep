@@ -1,0 +1,34 @@
+<view class="top_logo flex_row">
+	<image class="l_logo" src='/images/find/logo.png'></image>
+	<image class='r_logo_icon' src= '/images/find/daohang.png'></image>
+</view>
+<!-- 背景 -->
+<view class='top_bkg'>
+		<image src='/images/train/train_bgk.png'></image>
+</view>
+
+<view class='tea_item'>
+				<image src='/images/teacher/teacher_1.jpg'></image>
+				<view class='tea_con flex_col'>
+						<text class='name'>李慧茹</text>
+						<text class='position'>培训部主管</text>
+						<text class='detail'>毕业于杭州医学院康复治疗专业，主修儿童康复医学、儿童心理学、0-6岁儿童行为智力水平发育评估、语言训练、感觉统合训练等，持有国家职业鉴定保健按摩师四级、蒙台梭利亲毕业于杭州医学院康复治疗专业，主修儿童康复医学、儿童心理学、0-6岁儿童行为智力水平发育评估、语言训练、感觉统合训练等，持有国家职业鉴定保健按摩师四级、蒙台梭利亲</text>
+				</view>
+		</view>
+
+
+<!-- 站长统计 -->
+<view class='copyright flex_col'>
+		<text>Copyright © 2017 上海佳禾家庭服务有限公司 版权所有  沪ICP备12048079号</text>
+		<text>技术支持：雪中行者</text>
+</view>
+<!-- footer悬浮 -->
+<view class='footer_flex'>
+		<view class='footer_item flex_row'>
+				<image src='/images/find/001zx.png'></image>
+				<image src='/images/find/004zx.png'></image>
+				<image src='/images/find/003zx.png'></image>
+				<image src='/images/find/002zx.png'></image>
+		</view>
+</view>
+

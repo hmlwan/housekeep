@@ -16,7 +16,6 @@
 		color:#ff8900;
 		margin: 25rpx 0;
 		font-weight: bold
-
 }
 /* 简历 */
 .resume{
@@ -33,5 +32,4 @@
 		padding:15rpx 40rpx  ;
 		
 }
-
 

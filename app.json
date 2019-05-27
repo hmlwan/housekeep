@@ -4,7 +4,12 @@
 		"pages/server/index",
 		"pages/find/index",
 		"pages/detail/index",
-		"pages/logs/logs"
+		"pages/train/index",
+		"pages/teacher/index",
+		"pages/teacher/detail",
+		"pages/logs/logs",
+		"pages/main/index"
+
 	],
 	"window": {
 		"backgroundTextStyle": "light",

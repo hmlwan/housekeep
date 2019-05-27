@@ -1,0 +1,61 @@
+/* pages/teacher/index.wxss */
+/* top图 */
+.top_bkg image{
+		width: 100%;
+		height: 450rpx
+}
+/* 种类 */
+.trian_type{
+		flex-wrap: wrap;
+		justify-content:space-around;
+		text-align: center;
+		margin: 50rpx auto;
+}
+.trian_type text{
+		padding: 10rpx 30rpx;
+		border: 2px solid #cacaca;
+		border-radius: 50rpx;
+		font-size: 30rpx;
+}
+.trian_type .active{
+		background-color:#ff8900;
+		border:2px solid #ff8900;
+		color:#fff;
+}
+/* 教师资料 */
+.teacher{
+		width: 90%;
+		margin: 0 auto;
+		
+}
+.tea_item{
+	background-color: #ededed;
+	margin-bottom: 25rpx;
+}
+.tea_item image{
+		width: 100%;
+		height: 650rpx;
+}
+.tea_con{
+		font-size: 28rpx;
+		padding: 20rpx 20rpx 30rpx ;
+}
+
+.tea_con .name{
+		font-size: 35rpx;
+		padding-bottom: 20rpx;
+}
+.tea_con .position{
+		font-size:32rpx;
+}
+.tea_con .detail{
+	
+		display: -webkit-box;
+-webkit-box-orient: vertical;
+-webkit-line-clamp: 3;
+overflow: hidden;
+}
+
+
+
+

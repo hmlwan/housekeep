@@ -1,0 +1,9 @@
+/* pages/main/index.wxss */
+
+/* 轮播 */
+.scroll_image image{
+		width: 100%;
+}
+
+
+

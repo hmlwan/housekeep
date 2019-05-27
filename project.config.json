@@ -40,7 +40,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 1,
+			"current": 5,
 			"list": [
 				{
 					"id": -1,
@@ -53,6 +53,35 @@
 					"id": -1,
 					"name": "阿姨详情",
 					"pathName": "pages/detail/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "我要培训",
+					"pathName": "pages/train/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "师资力量",
+					"pathName": "pages/teacher/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "师资详情",
+					"pathName": "pages/teacher/detail",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 5,
+					"name": "返回首页",
+					"pathName": "pages/main/index",
+					"query": "",
 					"scene": null
 				}
 			]
