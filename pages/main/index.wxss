@@ -4,6 +4,121 @@
 .scroll_image image{
 		width: 100%;
 }
+/* 职业 */
+.zy{
+	position: relative;
+}
+.zy_item{
+		width: 100%;
+		position: relative;
+		text-align: center;
+}
+.zy_item image{
+		width: 100%;
+		height: 600rpx;
+}
+.zy_item .zy_con{
+		font-size: 35rpx;
+		position: absolute;
+		top:10% ;
+		left: 30%;
+}
+.zy_con text:first-child{
+		font-size: 40rpx;
+		font-weight: bold;
+		padding: 10rpx 0;
+}
+/* 我们的优势 */
+.ys{
+		width: 94%;
+		margin: 0 auto 60rpx;
+		text-align: center
+}
+.ys .ys_title{
+		font-size: 40rpx;
+		color:#ff8900;
+		margin: 40rpx 0;
+		font-weight: bold;
+		display: inline-block
+}
+.ys_item {
+		position: relative;
+		font-size: 34rpx;
+		color:#fff;
+		margin-bottom:20rpx;
+}
+.ys_item  image{
+		width: 100%;
+		height: 450rpx;
+}
+.ys_item text{
+		position: absolute;
+		bottom: 8%;
+		left: 40%;
+}
+/* 放心保障 */
 
+.fxbz{
+		width: 100%;
+}
+.fxbz .fxbz_bkg{
+		width: 100%;
+		position: relative;
+}
+.fxbz_bkg image{ 
+		width: 100%;
+		height: 400rpx;
+}
+.fxbz_bkg text{
+		position:absolute;
+		font-size: 40rpx;
+		font-weight: bold;
+		padding: 15rpx 35rpx;
+		background-color: #ed6a00;
+		top: 0;
+		right: 0;
+		color:#fff;
+}
+.fxbz_con{
+		width: 92%;
+		background-color: #ff9820;
+		padding: 4%;
+		color:#fff;
+		flex-wrap:wrap;
+		justify-content: space-between;
+}
+.fxbz_item{
+		width: 47%;
+		border: 3px solid rgb(255, 219, 177);
+		text-align: center;
+		font-size: 30rpx;
+		margin-bottom:20rpx;
+
+}
+.fxbz_item text:first-child{
+		padding: 40rpx 0 15rpx;
+		font-size: 32rpx;
+		font-weight: bold;
+}
+.fxbz_item text:last-child{
+		padding-bottom: 30rpx
+}
+/* 服务流程 */
+.fwlc{
+		width: 100%;
+		margin: 50rpx 0 40rpx ;
+		text-align: center;
+}
+.fwlc .lc_title{
+		font-size: 40rpx;
+		font-weight: bold;
+}
+.lc_con{
+		margin-top: 30rpx;
+		text-align: left;
+}
+.lc_con text{
+		padding: 15rpx 0 0 40rpx;
+}
 
 

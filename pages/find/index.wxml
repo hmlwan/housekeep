@@ -128,6 +128,7 @@
 				</view>
 		</view>
 </view>
+
 <!-- 联系我们 -->
 <view class='lx flex_col'>
 		<text class='lx_head'>联系我们</text>
@@ -158,7 +159,6 @@
 				<text>让我们的理念如阳光照耀每一个家庭。</text>
 		</view>	
 </view>
-
 </view>
 
 <!-- 站长统计 -->

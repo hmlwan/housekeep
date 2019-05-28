@@ -18,7 +18,114 @@
 		</swiper>
 </view>
 <!-- 职业 -->
-<view>
-
+<view class='zy'>
+		<view class='zy_item'>
+				<image src='/images/remain/js_1.jpg'></image>
+				<view class='zy_con flex_col'>
+						<text>育婴师1</text>
+						<text>佳禾育婴 · 爱如己出1</text>
+				</view>
+		</view>
+		<view class='zy_item'>
+				<image src='/images/remain/js_2.jpg'></image>
+				<view class='zy_con flex_col'>
+						<text>育婴师2</text>
+						<text>佳禾育婴 · 爱如己出2</text>
+				</view>
+		</view>
+		<view class='zy_item'>
+				<image src='/images/remain/js_3.jpg'></image>
+				<view class='zy_con  flex_col'>
+						<text>育婴师3</text>
+						<text>佳禾育婴 · 爱如己出3</text>
+				</view>
+		</view>
+</view>
+<!-- 我们的优势 -->
+<view class='ys'>
+		<text class='ys_title'>我们的优势</text>
+		<view class='ys_item'>
+				<image src='/images/remain/ys_1.jpg'></image>
+				<text>佳禾培训</text>
+		</view>
+		<view class='ys_item'>
+				<image src='/images/remain/ys_2.jpg'></image>
+				<text>强大服务网络</text>
+		</view>
+		<view class='ys_item'>
+				<image src='/images/remain/ys_3.jpg'></image>
+				<text>强大客服团队</text>
+		</view>
 </view>
 
+<!-- 放心保障 -->
+<view class='fxbz'>
+		<view class='fxbz_bkg'>
+					<image src='/images/remain/fxbz_1.jpg'></image>
+					<text>放心保障</text>
+		</view>
+		<view class='fxbz_con flex_row'>
+				<view class='fxbz_item flex_col'>
+						<text>持证上岗</text>
+						<text>佳禾阿姨都接受</text>
+						<text>严格培训，持证上岗</text>
+				</view>
+				<view class='fxbz_item flex_col'>
+						<text>体检机构统一体检</text>
+						<text>佳禾阿姨都接受</text>
+						<text>体检机构统一体检</text>
+				</view>
+				<view class='fxbz_item flex_col'>
+						<text>保险计划</text>
+						<text>佳禾阿姨都享有</text>
+						<text>家政无忧保险计划</text>
+				</view>
+				<view class='fxbz_item flex_col'>
+						<text>无犯罪记录核查</text>
+						<text>佳禾阿姨都通过</text>
+						<text>公安部无犯罪记录核查</text>
+				</view>
+		</view>
+</view>
+<!-- 服务流程 -->
+<view class='fwlc'>
+		<text class='lc_title'>佳禾家政服务流程</text>
+		<view class='lc_con flex_col'>
+				<text>1.客户需求</text>
+				<text>2.客户需求分析以及服务方案定制</text>
+				<text>3.家政服务人员推荐</text>
+				<text>4.家政服务员简历发送给雇主</text>
+				<text>5.家政服务员面试</text>
+				<text>6.签订服务合同</text>
+				<text>7.支付费用+购买保险</text>
+				<text>8.家政服务员上岗</text>
+				<text>9.定期回访与客户沟通</text>
+		</view>
+</view>
+
+<!-- 呵护 -->
+<view>
+    <view class='hehu_bgk'  style="">
+		<view class='hehu_con flex_col'>
+				<text>佳禾用爱呵护 · 关爱千万家！</text>
+				<text>我们秉承服务客户的理念，时刻关注现代家庭的个性化需求，</text>
+				<text>把客户需求放在首位，用我们真诚、爱心，为您提供贴心的家政服务，</text>
+				<text>让我们的理念如阳光照耀每一个家庭。</text>
+		</view>	
+</view>
+</view>
+
+<!-- 站长统计 -->
+<view class='copyright flex_col'>
+		<text>Copyright © 2017 上海佳禾家庭服务有限公司 版权所有  沪ICP备12048079号</text>
+		<text>技术支持：雪中行者</text>
+</view>
+<!-- footer悬浮 -->
+<view class='footer_flex'>
+		<view class='footer_item flex_row'>
+				<image src='/images/find/001zx.png'></image>
+				<image src='/images/find/004zx.png'></image>
+				<image src='/images/find/003zx.png'></image>
+				<image src='/images/find/002zx.png'></image>
+		</view>
+</view>

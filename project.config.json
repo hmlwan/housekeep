@@ -40,7 +40,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 5,
+			"current": 7,
 			"list": [
 				{
 					"id": -1,
@@ -81,6 +81,20 @@
 					"id": 5,
 					"name": "返回首页",
 					"pathName": "pages/main/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "强大网络服务",
+					"pathName": "pages/server/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "高单发布",
+					"pathName": "pages/pub/index",
 					"query": "",
 					"scene": null
 				}

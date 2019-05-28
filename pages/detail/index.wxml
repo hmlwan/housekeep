@@ -61,22 +61,20 @@
                   <label>自我评价</label>
                   <text>阿姨从事月嫂育婴多年，实践操作经验丰厚，擅长辅助调理产妇心理，能合理安排月子期间的大小事宜。对紧急事件能做到妥善调谐，做事情认真，有责任心，爱心，懂得煲汤养生，推拿按摩。善于辅助产妇月子后的形体恢复，深受东家信赖好评。</text>
               </view>
-          
-          
           </view>
+
+					<!-- 生活照片 -->
+					<view class='life flex_col'>
+							<text>生活照片</text>
+							<image src='/images/detail/ayi_1.jpg'></image>
+					</view>
 
 		</view>
 </view>	
-
-
-
-
-
-
-
-
-
-
+<!-- 立即预约 -->
+<view class='sub_btn'>
+		<button>立即预约</button>
+</view>	
 
 
 <!-- 站长统计 -->

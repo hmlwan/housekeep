@@ -1,0 +1,9 @@
+/* pages/pub/index.wxss */
+.top_bkg image{
+		width: 100%;
+		height: 300rpx;		
+}
+
+
+
+

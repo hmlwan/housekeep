@@ -7,9 +7,9 @@
 		"pages/train/index",
 		"pages/teacher/index",
 		"pages/teacher/detail",
+		"pages/pub/index",  
 		"pages/logs/logs",
 		"pages/main/index"
-
 	],
 	"window": {
 		"backgroundTextStyle": "light",

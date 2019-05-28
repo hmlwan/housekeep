@@ -1,0 +1,11 @@
+<!--高单发布-->
+<view class="top_logo flex_row">
+	<image class="l_logo" src='/images/find/logo.png'></image>
+	<image class='r_logo_icon' src= '/images/find/daohang.png'></image>
+</view>
+<!-- 背景 -->
+<view class='top_bkg'>
+		<image src='/images/main/int_bkg.jpg'></image>
+</view>
+
+<!--  -->
