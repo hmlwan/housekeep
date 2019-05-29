@@ -18,6 +18,84 @@
     content: ''
 }
 
+/* 遮罩 */
+.zhezao{
+		position:fixed;
+		top:0;
+		width: 100%;
+		height: 100%;
+		background-color:rgba(0,0,0,0.4);
+		overflow: hidden;
+		z-index:100;
+}
+
+/* 弹窗start */
+.pop_up{
+		position: absolute;
+		top:20%;
+		left:5%;
+		background-color: #fff;
+		width: 90%;
+		margin: 0 auto;
+		height: auto;
+		text-align: center;
+		font-size: 30rpx;
+}
+.pop_ip_bkg {
+		justify-content: space-between;
+}
+.pop_ip_bkg image{
+		width: 80%;
+		height: 100rpx;
+}
+.pop_ip_bkg .sc_btn{
+		height: 60rpx;
+		width: 60rpx;
+}
+.pop_up_item{
+		text-align: left;
+}
+.pop_up_item input{
+		border-bottom: 1px solid #444444;
+		padding-left: 10rpx;
+		padding-top:5rpx;
+		width:80%;
+}
+.pop_up view{
+		padding: 40rpx 20rpx  10rpx 60rpx;
+}
+.pop_up .pop_sub{
+		width: 80%;
+		padding: 20rpx;
+		background-color: #ff8900;
+		color:#fff;
+		margin:40rpx auto;
+}
+/* 弹窗end */
+
+/* 菜单 */
+.menu{
+		width:100%;
+}
+.menu .menu_sc{
+		text-align:right;
+		padding:40rpx;
+}
+.menu .menu_sc image{ 
+		height:70rpx;
+		width:70rpx;
+}
+.menu .menu_item{
+		width:80%;
+		margin:0 auto;
+		text-align:center;
+		font-size: 30rpx;
+}
+.menu_item text{
+		border-bottom: 1px solid #e5e5e5;
+		padding: 20rpx;
+}
+/* 菜单end */
 
 /* 联系我么 */
 .lx{

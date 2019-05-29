@@ -8,4 +8,107 @@
 		<image src='/images/main/int_bkg.jpg'></image>
 </view>
 
-<!--  -->
+<!-- 弹窗 遮罩 --> 
+<view class='zhezao' hidden="{{is_show}}">
+	<view class='pop_up'>
+				<view class='pop_ip_bkg flex_row'>
+					<image src='/images/find/logo.png'></image>
+					<image class='sc_btn'  bindtap='cancel'  src='/images/main/shanchu.png'></image>
+				</view>
+				<view class='flex_row pop_up_item' >
+						<label>姓名：</label>
+						<input placeholder='请输入您的姓名'></input>
+				</view>
+				<view class='flex_row pop_up_item'>
+						<label>电话：</label>
+						<input placeholder='请输入您的手机号'></input>
+				</view>
+				<view class='pop_sub'>提交</view>
+		</view>
+</view>
+
+<!-- 高单发布 -->
+<view class='pub'>
+		<text class='gdfb'>高单发布</text>
+		<view class='pub_item flex_col'>
+				<text class='pub_title'>￥烧饭保洁（上海浦东陆家嘴）</text>
+				<view class='pub_require_1  flex_row'>
+						<text class='iconfont icon-shijian'>2019/05/28</text>
+						<text class='iconfont icon-gongzuonianxian'>1-3年</text>
+						<text class='iconfont icon-1'>住家,不住家</text>
+				</view>
+				<view class='pub_require_2'>
+						<view class='iconfont icon-star-hover task_title'>
+								<text>任务需求</text>
+						</view>
+						<view class='task_item flex_col'>
+								<text>【工作地址】上海陆家嘴（可以早出晚归）</text>
+								<text>【工作性质】家务助理  180平</text>
+								<text>【工作内容】烧饭保洁</text>
+								<text>【阿姨要求】做饭好吃，南方阿姨，干净利落，素质好.</text>
+								<text>【薪资待遇】7000-9000</text>
+								<text>【联系电话】佳禾栗老师18516339537</text>
+								<text>【佳禾总部地址】上海市徐汇区徐虹北路3号2楼整层（老百姓大药房楼上）</text>
+								<text>【乘车路线】地铁3、4、9号线宜山路站下，4号线5号口出步行50米</text>
+						</view>
+						<view class='pub_lx flex_row'>
+								<text class='iconfont icon-phone lxfs'>联系方式</text>
+								<text class='lxhm'>18516339537</text>
+						</view>
+						<view class='sub_btn'>
+								<button bindtap="show">我要应聘</button>
+						</view>
+				</view>
+		</view>
+
+
+			<view class='pub_item flex_col'>
+				<text class='pub_title'>￥烧饭保洁（上海浦东陆家嘴）</text>
+				<view class='pub_require_1 flex_row'>
+						<text class='iconfont icon-shijian'>2019/05/28</text>
+						<text class='iconfont icon-gongzuonianxian'>1-3年</text>
+						<text class='iconfont icon-1'>住家,不住家</text>
+				</view>
+				<view class='pub_require_2'>
+						<view class='iconfont icon-star-hover task_title'>
+								<text>任务需求</text>
+						</view>
+						<view class='task_item flex_col'>
+								<text>【工作地址】上海陆家嘴（可以早出晚归）</text>
+								<text>【工作性质】家务助理  180平</text>
+								<text>【工作内容】烧饭保洁</text>
+								<text>【阿姨要求】做饭好吃，南方阿姨，干净利落，素质好.</text>
+								<text>【薪资待遇】7000-9000</text>
+								<text>【联系电话】佳禾栗老师18516339537</text>
+								<text>【佳禾总部地址】上海市徐汇区徐虹北路3号2楼整层（老百姓大药房楼上）</text>
+								<text>【乘车路线】地铁3、4、9号线宜山路站下，4号线5号口出步行50米</text>
+						</view>
+						<view class='pub_lx flex_row'>
+								<text class='iconfont icon-phone lxfs'>联系方式</text>
+								<text class='lxhm'>18516339537</text>
+						</view>
+						<view class='sub_btn'>
+								<button bindtap="show">我要应聘</button>
+						</view>
+				</view>
+		</view>
+
+</view>	
+
+<!-- 站长统计 -->
+<view class='copyright flex_col'>
+		<text>Copyright © 2017 上海佳禾家庭服务有限公司 版权所有  沪ICP备12048079号</text>
+		<text>技术支持：雪中行者</text>
+</view>
+<!-- footer悬浮 -->
+<view class='footer_flex'>
+		<view class='footer_item flex_row'>
+				<image src='/images/find/001zx.png'></image>
+				<image src='/images/find/004zx.png'></image>
+				<image src='/images/find/003zx.png'></image>
+				<image src='/images/find/002zx.png'></image>
+		</view>
+</view>
+
+
+

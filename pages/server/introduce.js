@@ -1,4 +1,6 @@
-// pages/pub/index.js
+// pages/server/introduce.js
+var menu = getApp();
+
 Page({
 
 	/**
@@ -7,24 +9,32 @@ Page({
 	data: {
 
 	},
-	show:function(){
-		this.setData({
-				is_show:false
-		});
+	close_menu: function () {
+		this.setData(
+			{ menu_flag: true }
+		);
 	},
-	cancel: function () {
-		this.setData({
-				is_show: true
-		});
+	open_menu: function () {
+		this.setData(
+			{ menu_flag: false }
+		);
 	},
 
 	/**
 	 * 生命周期函数--监听页面加载
 	 */
 	onLoad: function (options) {
-		this.setData({
-			is_show: false
-		});
+		this.setData({ menu_flag: true });
+
+
+	},
+	// 遮罩层显示
+	show: function () {
+		this.setData({ flag: false })
+	},
+	// 遮罩层隐藏
+	conceal: function () {
+		this.setData({ flag: true })
 	},
 
 	/**

@@ -1,0 +1,68 @@
+<!--高单发布-->
+<view class="top_logo flex_row">
+	<image class="l_logo" src='/images/find/logo.png'></image>
+	<image class='r_logo_icon' bindtap='open_menu' src= '/images/find/daohang.png'></image>
+</view>
+<!-- 背景 -->
+<view class='top_bkg'>
+		<image src='/images/main/introduce_bkg.jpg'></image>
+</view>
+
+<view class='menu zhezao flex_col' hidden="{{menu_flag}}">
+		<view class='menu_sc' bindtap='close_menu'>
+				<image src='/images/main/shanchu_2.png'></image>
+		</view>
+		<view class='menu_item flex_col'>
+				<text>高级育婴师</text>
+				<text>高单发布</text>
+				<text>关于佳禾</text>
+		</view>
+</view>
+
+
+<!-- 关于佳禾 -->
+<view class='about flex_col'>
+		<text class='culture_title'>关于佳禾</text>
+		<text class='about_con'>佳禾国际家政隶属上海佳禾家庭服务有限公司、上海市徐汇区总工会会员单位、上海市家政协会会员单位、上海市徐汇区妇女联合会执委单位、上海市家政行业第一个“五一劳动奖章”获得单位，集培训和业务为一体。登记在册阿姨数量10万+，累计培训8年+，累计培训阿姨8万+，拥有海量优质阿姨资源。培训品质一直深受客户好评，满意度达90%以上。 佳禾国际家政中国家政服务业的创新者，定制复合型家政人员。是一家提供高级育婴师、月嫂、家庭早教师家务助理、住家保姆、海外派遣、涉外保姆的国际性家政服务公司。对客户公司秉着用爱呵护、关爱千万家的宗旨,用心倾听每个客户的需求，提供、品质、贴心的家政服务。对员工公司秉着勇担重任、服务为荣的宗旨，进行细致、科学的系统培训，使员工永立潮头、不忘初心，更好地服务社会。上海佳禾真诚期待您的咨询.</text>
+</view>	
+<!-- 佳禾文化 -->
+<view class='culture flex_col'>
+		<text class='culture_title'>佳禾文化</text>
+		<view class='culture_item flex_row'>
+				<text>爱心</text>
+				<text>责任</text>
+				<text>奉献</text>
+		</view>
+</view>
+<!-- 佳禾宗旨 -->
+<view class='purpose flex_col'>
+		<text class='culture_title'>佳禾服务</text>
+		<text class='about_con'>佳禾国际家政以“奉献爱、体验爱”为宗旨，创新“爱+呵护、爱+细心、爱+耐心、爱+安心、爱+科学喂养”的五大“爱+”服务，帮助家庭成员建立更温馨的亲子关系，激发婴儿成长发育的潜能，让爱更有力和能量、让家更为舒心。</text>
+		<view class='purpose_img flex_row'>
+				<image src='/images/serive/fw_1.jpg'></image>
+				<image src='/images/serive/fw_2.jpg'></image>
+				<image src='/images/serive/fw_3.jpg'></image>
+				<image src='/images/serive/fw_4.jpg'></image>
+				<image src='/images/serive/fw_5.jpg'></image>
+				<image src='/images/serive/fw_6.jpg'></image>
+		</view>
+
+</view>
+
+<!-- 站长统计 -->
+<view class='copyright flex_col'>
+		<text>Copyright © 2017 上海佳禾家庭服务有限公司 版权所有  沪ICP备12048079号</text>
+		<text>技术支持：雪中行者</text>
+</view>
+<!-- footer悬浮 -->
+<view class='footer_flex'>
+		<view class='footer_item flex_row'>
+				<image src='/images/find/001zx.png'></image>
+				<image src='/images/find/004zx.png'></image>
+				<image src='/images/find/003zx.png'></image>
+				<image src='/images/find/002zx.png'></image>
+		</view>
+</view>
+
+
+

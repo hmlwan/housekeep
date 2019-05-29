@@ -9,7 +9,8 @@
 		"pages/teacher/detail",
 		"pages/pub/index",  
 		"pages/logs/logs",
-		"pages/main/index"
+		"pages/main/index",
+		"pages/server/introduce"
 	],
 	"window": {
 		"backgroundTextStyle": "light",
