@@ -1,0 +1,17 @@
+<!--推荐客户-->
+<view class='client_bkg'>
+    <image src='/images/main/kehu_img.jpg'></image>
+    <view class='client_con flex_col'>
+        <form class='tj_form flex_col'>
+            <input placeholder='请输入客户姓名' type="text" ></input>
+            <input placeholder='请输入客户电话' type="number" ></input>
+            <input placeholder='请输入推荐人姓名' type="text" ></input>
+            <input placeholder='请输入推荐人电话' type="number" ></input>
+            <input placeholder='请输入推荐人微信' type="text" ></input>
+            <input placeholder='请输入推荐人支付宝账号' type="number" ></input>
+             <input placeholder='请输入推荐人银行账号' type="number" ></input>
+            <button class='tj_btn' form-type="submit">提交信息</button>
+        </form>
+    </view>
+</view>
+

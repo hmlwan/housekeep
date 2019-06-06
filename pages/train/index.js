@@ -1,6 +1,31 @@
 // pages/train/index.js
 Page({
 
+  // 在线客服
+  kefu: function () {
+    wx.makePhoneCall({
+      phoneNumber: '',
+    })
+  },
+  // 预约阿姨
+  yuyue: function () {
+    wx.redirectTo({
+      url: '/pages/find/index',
+    })
+  },
+  // 我要培训
+  peixun: function () {
+    wx.redirectTo({
+      url: '/pages/train/index',
+    })
+  },
+  // 返回首页
+  fanhui: function () {
+    wx.redirectTo({
+      url: '/pages/main/index',
+    })
+  },
+
 	/**
 	 * 页面的初始数据
 	 */

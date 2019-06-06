@@ -1,5 +1,8 @@
 // pages/pub/index.js
-Page({
+var footer = require("../common/footer.js");
+
+Page(
+  Object.assign({
 
 	/**
 	 * 页面的初始数据
@@ -17,7 +20,7 @@ Page({
 				is_show: true
 		});
 	},
-
+  
 	/**
 	 * 生命周期函数--监听页面加载
 	 */
@@ -25,6 +28,7 @@ Page({
 		this.setData({
 			is_show: false
 		});
+    
 	},
 
 	/**
@@ -75,4 +79,4 @@ Page({
 	onShareAppMessage: function () {
 
 	}
-})
+  }, { ...footer}))

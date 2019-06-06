@@ -1,0 +1,7 @@
+/* pages/index/server.wxss */
+.jhfw image{
+    width: 100%;
+    height: 1000rpx;
+}
+
+

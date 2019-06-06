@@ -13,7 +13,7 @@
 		"checkInvalidKey": true
 	},
 	"compileType": "miniprogram",
-	"libVersion": "2.6.6",
+	"libVersion": "2.0.4",
 	"appid": "wxfac178567fcd21ee",
 	"projectname": "housekeep",
 	"debugOptions": {
@@ -40,7 +40,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 8,
+			"current": 11,
 			"list": [
 				{
 					"id": -1,
@@ -102,6 +102,27 @@
 					"id": -1,
 					"name": "公司简介",
 					"pathName": "pages/server/introduce",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "首页",
+					"pathName": "pages/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "介绍学员",
+					"pathName": "pages/introduce/student",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 11,
+					"name": "介绍客户",
+					"pathName": "pages/introduce/client",
 					"query": "",
 					"scene": null
 				}

@@ -10,7 +10,10 @@
 		"pages/pub/index",  
 		"pages/logs/logs",
 		"pages/main/index",
-		"pages/server/introduce"
+		"pages/server/introduce",
+    "pages/index/server",
+    "pages/introduce/student",
+    "pages/introduce/client"
 	],
 	"window": {
 		"backgroundTextStyle": "light",
@@ -30,7 +33,7 @@
 				"selectedIconPath": "images/main/home_selected.png"
 			},
 			{
-				"pagePath": "pages/index/index",
+				"pagePath": "pages/index/server",
 				"text": "佳禾服务",
 				"iconPath": "images/main/server.png",
 				"selectedIconPath": "images/main/server_selected.png"

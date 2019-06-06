@@ -97,11 +97,4 @@
 		<text>技术支持：雪中行者</text>
 </view>
 <!-- footer悬浮 -->
-<view class='footer_flex'>
-		<view class='footer_item flex_row'>
-				<image src='/images/find/001zx.png'></image>
-				<image src='/images/find/004zx.png'></image>
-				<image src='/images/find/003zx.png'></image>
-				<image src='/images/find/002zx.png'></image>
-		</view>
-</view>
+<include src="../common/footer.wxml" />

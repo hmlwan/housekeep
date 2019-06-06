@@ -1,0 +1,34 @@
+/* pages/introduce/client.wxss */
+.client_bkg{
+    width: 100%;
+    height: auto;
+    background: linear-gradient(to right,#fb8200,#fca74d,#f99700,#fb8200,#fab54d)
+}
+.client_bkg image{
+    width: 100%;
+    height: 300rpx;
+    margin-bottom: 60rpx
+}
+.client_con{
+    width:80%;
+    margin: 0 auto 
+}
+
+.tj_form input{
+    font-size: 30rpx;
+    background-color: #fff;
+    padding: 10rpx 0 10rpx 20rpx; 
+    margin-bottom: 35rpx;
+}
+.tj_form .tj_btn{
+    background: linear-gradient(to right,#ed8138,#ef872e,#f69024,#f9990f,#fea106);
+    width:85%;
+    color:#fff;
+    border-radius: 10rpx;
+    font-size: 30rpx;
+    text-align: center;
+    margin: 50rpx auto 60rpx;
+}
+
+
+

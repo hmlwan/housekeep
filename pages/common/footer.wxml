@@ -1,0 +1,10 @@
+<!-- footer悬浮 -->
+<view class='footer_flex'>
+		<view class='footer_item flex_row'>
+				<image src='/images/find/001zx.png' bindtap='kefu'></image>
+				<image src='/images/find/004zx.png' bindtap='yuyue'></image>
+				<image src='/images/find/003zx.png' bindtap='peixun'></image>
+				<image src='/images/find/002zx.png' bindtap='fanhui'></image>
+		</view>
+</view>
+

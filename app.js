@@ -33,6 +33,9 @@ App({
       }
     })
   },
+  globalData:{
+    HOST:"http://www.housekeep_sys.com/admin/Api/"
+  }
 
 	
 },
