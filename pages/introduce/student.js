@@ -1,4 +1,5 @@
 // pages/introduce/student.js
+const ui = require("../../utils/ui.js")
 Page({
 
   /**
@@ -12,7 +13,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    ui.showToast('成功');
   },
 
   /**

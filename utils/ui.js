@@ -1,8 +1,8 @@
-export const showToast = function (content, duration) {
-  if (!duration) duration = 2000
+export const showToast = function (content, icon,duration) {
+  if (!duration) duration = 2000; icon="none"
   wx.showToast({
     title: content,
-    icon: 'none',
+    icon: icon,
     duration: duration,
   })
 }
