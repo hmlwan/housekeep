@@ -2,8 +2,8 @@
 <view class='student_bkg'>
     <view class='student_con flex_col'>
         <image src='/images/find/logo.png'></image>
-        <form class='tj_form flex_col' bindsubmit="formSubmit" bindreset="formReset">
-            <input type='text' hidden='true' name="type" value="1" ></input>
+        <form class='tj_form flex_col' bindsubmit="sub_form" bindreset="formReset">
+            <input type='text' hidden='true' name="type" value="2" ></input>
             <input placeholder='请输入培训学员姓名' type="text" name="train_name" ></input>
             <input placeholder='请输入联系电话' type="number" name="train_phone" ></input>
             <input placeholder='请输入推荐人姓名' type="text" name="recommend_name" ></input>
@@ -11,7 +11,7 @@
             <input placeholder='请输入推荐人微信' type="text" name="recommend_wx" ></input>
             <input placeholder='请输入推荐人支付宝账号' type="number" name="recommend_zfb" ></input>
             <input placeholder='请输入推荐人银行账号' type="number" name="recommend_bank" ></input>
-            <button  form-type="submit" class='tj_btn'>提交信息</button >
+            <button  form-type="submit" open-type="getUserInfo" bindgetuserinfo="getUserInfo" class='tj_btn'>提交信息</button >
         </form>
 
     </view>

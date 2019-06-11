@@ -1,7 +1,7 @@
 <!--师资力量-->
 <!--头部logo-->
 <view class="top_logo flex_row">
-	<image class="l_logo" src='/images/find/logo.png'></image>
+	<image class="l_logo" src='{{IP}}{{CONFIG.web_logo}}'></image>
 	<image class='r_logo_icon' src= '/images/find/daohang.png'></image>
 </view>
 <!-- 背景 -->
@@ -10,50 +10,28 @@
 </view>
 <!-- 种类 -->
 <view class='trian_type flex_row'>
-		<text class='active'>培训科目</text>
-		<text>师资力量</text>
-		<text>证书查询</text>
+		<text bindtap='course'>培训科目</text>
+		<text class='active'>师资力量</text>
+		<!-- <text>证书查询</text> -->
 </view>
 <!-- 教师资料 -->
-<view class='teacher'>
-		<view class='tea_item'>
-				<image src='/images/teacher/teacher_1.jpg'></image>
+<view class='teacher' wx:for="{{teacher_list}}" wx:for-item="v">
+		<view class='tea_item' data-id='{{v.id}}' bindtap='teacherDetail'>
+				<image src='{{IP}}{{v.img}}'></image>
 				<view class='tea_con flex_col'>
-						<text class='name'>李慧茹</text>
-						<text class='position'>培训部主管</text>
-						<text class='detail'>毕业于杭州医学院康复治疗专业，主修儿童康复医学、儿童心理学、0-6岁儿童行为智力水平发育评估、语言训练、感觉统合训练等，持有国家职业鉴定保健按摩师四级、蒙台梭利亲毕业于杭州医学院康复治疗专业，主修儿童康复医学、儿童心理学、0-6岁儿童行为智力水平发育评估、语言训练、感觉统合训练等，持有国家职业鉴定保健按摩师四级、蒙台梭利亲</text>
+						<text class='name'>{{v.name}}</text>
+						<text class='position'>{{v.position}}</text>
+						<text class='detail'>{{v.introduce}}</text>
 				</view>
 		</view>
-		<view class='tea_item'>
-				<image src='/images/teacher/teacher_2.jpg'></image>
-				<view class='tea_con flex_col'>
-						<text class='name'>李慧茹</text>
-						<text class='position'>培训部主管</text>
-						<text class='detail'>毕业于杭州医学院康复治疗专业，主修儿童康复医学、儿童心理学、0-6岁儿童行为智力水平发育评估、语言训练、感觉统合训练等，持有国家职业鉴定保健按摩师四级、蒙台梭利亲毕业于杭州医学院康复治疗专业，主修儿童康复医学、儿童心理学、0-6岁儿童行为智力水平发育评估、语言训练、感觉统合训练等，持有国家职业鉴定保健按摩师四级、蒙台梭利亲</text>
-				</view>
-		</view>
-		<view class='tea_item'>
-				<image src='/images/teacher/teacher_3.jpg'></image>
-				<view class='tea_con flex_col'>
-						<text class='name'>李慧茹</text>
-						<text class='position'>培训部主管</text>
-						<text class='detail'>小儿推拿、催乳师，精通母婴护理与妇儿临床经验。擅长中医小儿推拿，调理小儿消化不良。感冒发烧、及产后女性体虚，产后疼痛。妇科病、乳腺增生、颈肩腰腿疼痛、咳嗽小儿推拿、催乳师，精通母婴护理与妇儿临床经验。擅长中医小儿推拿，调理小儿消化不良。感冒发烧、及产后女性体虚，产后疼痛。妇科病、乳腺增生、颈肩腰腿疼痛、咳嗽</text>
-				</view>
-		</view>
+
 </view>
 
 
 <!-- 站长统计 -->
 <view class='copyright flex_col'>
-		<text>Copyright © 2017 上海佳禾家庭服务有限公司 版权所有  沪ICP备12048079号</text>
-		<text>技术支持：雪中行者</text>
+		<text>{{CONFIG.copyright}}</text>
+		<text>技术支持：{{CONFIG.technical_support}}</text>
 </view>
 <!-- footer悬浮 -->
-<view class='footer_flex'>
-		<view class='footer_item flex_row'>
-				<image src='/images/find/001zx.png'></image>
-				<image src='/images/find/004zx.png'></image>
-				<image src='/images/find/003zx.png'></image>
-				<image src='/images/find/002zx.png'></image>
-		</view>
-</view>
+<include src="../common/footer.wxml" />

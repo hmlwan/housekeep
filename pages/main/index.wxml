@@ -1,5 +1,5 @@
 <view class="top_logo flex_row">
-	<image class="l_logo" src='/images/find/logo.png'></image>
+	<image class="l_logo" src='{{IP}}{{CONFIG.web_logo}}'></image>
 	<image class='r_logo_icon' src= '/images/find/daohang.png'></image>
 </view>
 <!-- 轮播图 -->
@@ -7,48 +7,34 @@
 <view class='scroll_image'>
 		<swiper autoplay="true" circular='true' indicator-dots='true' >
 			<swiper-item>
-					<image src='/images/remain/scroll_img_1.jpg'></image>
+					<image   bindtap='aboutCompany' src='/images/remain/scroll_img_1.jpg'></image>
 			</swiper-item>
 			<swiper-item>
-					<image src='/images/remain/scroll_img_2.jpg'></image>
+					<image bindtap='train' src='/images/remain/scroll_img_2.jpg'></image>
 			</swiper-item>
 				<swiper-item>
-					<image src='/images/remain/scroll_img_3.jpg'></image>
+					<image bindtap='subCompany' src='/images/remain/scroll_img_3.jpg'></image>
 			</swiper-item>
 		</swiper>
 </view>
 <!-- 职业 -->
-<view class='zy'>
-		<view class='zy_item'>
-				<image src='/images/remain/js_1.jpg'></image>
+<view class='zy' wx:for="{{job_list}}">
+		<view class='zy_item' data-id='{{item.type_id}}' bindtap='jumpAyi'>
+				<image src='{{IP}}{{item.img}}'></image>
 				<view class='zy_con flex_col'>
-						<text>育婴师1</text>
-						<text>佳禾育婴 · 爱如己出1</text>
-				</view>
-		</view>
-		<view class='zy_item'>
-				<image src='/images/remain/js_2.jpg'></image>
-				<view class='zy_con flex_col'>
-						<text>育婴师2</text>
-						<text>佳禾育婴 · 爱如己出2</text>
-				</view>
-		</view>
-		<view class='zy_item'>
-				<image src='/images/remain/js_3.jpg'></image>
-				<view class='zy_con  flex_col'>
-						<text>育婴师3</text>
-						<text>佳禾育婴 · 爱如己出3</text>
+						<text>{{item.type_name}}</text>
+						<!-- <text>{{item.introduce}}</text> -->
 				</view>
 		</view>
 </view>
 <!-- 我们的优势 -->
 <view class='ys'>
 		<text class='ys_title'>我们的优势</text>
-		<view class='ys_item'>
+		<view class='ys_item' bindtap='train'>
 				<image src='/images/remain/ys_1.jpg'></image>
 				<text>佳禾培训</text>
 		</view>
-		<view class='ys_item'>
+		<view class='ys_item' bindtap='subCompany'>
 				<image src='/images/remain/ys_2.jpg'></image>
 				<text>强大服务网络</text>
 		</view>
@@ -117,15 +103,8 @@
 
 <!-- 站长统计 -->
 <view class='copyright flex_col'>
-		<text>Copyright © 2017 上海佳禾家庭服务有限公司 版权所有  沪ICP备12048079号</text>
-		<text>技术支持：雪中行者</text>
+		<text>{{CONFIG.copyright}}</text>
+		<text>技术支持：{{CONFIG.technical_support}}</text>
 </view>
 <!-- footer悬浮 -->
-<view class='footer_flex'>
-		<view class='footer_item flex_row'>
-				<image src='/images/find/001zx.png'></image>
-				<image src='/images/find/004zx.png'></image>
-				<image src='/images/find/003zx.png'></image>
-				<image src='/images/find/002zx.png'></image>
-		</view>
-</view>
+<include src="../common/footer.wxml" />

@@ -1,5 +1,5 @@
 <!--pages/index/server.wxml-->
 <view  class='jhfw'>
-    <image src='/images/main/jhfw.jpg'></image>
+    <image src='{{IP}}{{CONFIG.main_jiahe_img}}'></image>
 </view>
 

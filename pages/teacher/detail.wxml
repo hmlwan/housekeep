@@ -1,5 +1,5 @@
 <view class="top_logo flex_row">
-	<image class="l_logo" src='/images/find/logo.png'></image>
+	<image class="l_logo" src='{{IP}}{{CONFIG.web_logo}}'></image>
 	<image class='r_logo_icon' src= '/images/find/daohang.png'></image>
 </view>
 <!-- 背景 -->
@@ -19,16 +19,9 @@
 
 <!-- 站长统计 -->
 <view class='copyright flex_col'>
-		<text>Copyright © 2017 上海佳禾家庭服务有限公司 版权所有  沪ICP备12048079号</text>
-		<text>技术支持：雪中行者</text>
+		<text>{{CONFIG.copyright}}</text>
+		<text>技术支持：{{CONFIG.technical_support}}</text>
 </view>
 <!-- footer悬浮 -->
-<view class='footer_flex'>
-		<view class='footer_item flex_row'>
-				<image src='/images/find/001zx.png'></image>
-				<image src='/images/find/004zx.png'></image>
-				<image src='/images/find/003zx.png'></image>
-				<image src='/images/find/002zx.png'></image>
-		</view>
-</view>
+<include src="../common/footer.wxml" />
 

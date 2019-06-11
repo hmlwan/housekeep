@@ -1,31 +1,11 @@
 // pages/train/index.js
-Page({
+var footer = require("../common/footer.js");
+const ui = require("../../utils/ui.js");
+const http = require("../../utils/http.js");
+var app = getApp();
 
-  // 在线客服
-  kefu: function () {
-    wx.makePhoneCall({
-      phoneNumber: '',
-    })
-  },
-  // 预约阿姨
-  yuyue: function () {
-    wx.redirectTo({
-      url: '/pages/find/index',
-    })
-  },
-  // 我要培训
-  peixun: function () {
-    wx.redirectTo({
-      url: '/pages/train/index',
-    })
-  },
-  // 返回首页
-  fanhui: function () {
-    wx.redirectTo({
-      url: '/pages/main/index',
-    })
-  },
-
+Page(
+  Object.assign({
 	/**
 	 * 页面的初始数据
 	 */
@@ -37,6 +17,31 @@ Page({
 	 * 生命周期函数--监听页面加载
 	 */
 	onLoad: function (options) {
+    wx.hideLoading();
+    this.setData({
+      CONFIG: app.globalData.CONFIG,
+      IP: app.globalData.IP,
+    });
+    var url = app.globalData.HOST;
+    var self = this;
+    http.post({
+      url: `${url}getCourseList`,
+      obtainResponse: true,
+      success: (res) => {
+        console.log(res);
+        var result = res.data;
+        var status = result.status;
+        if (status == 1) {
+          var course_list = result.data;
+          self.setData({
+            course_list: course_list,
+          });
+        } else {
+          ui.showToast("接口获取失败");
+        }
+      }
+    })
+
 
 	},
 
@@ -87,5 +92,60 @@ Page({
 	 */
 	onShareAppMessage: function () {
 
-	}
-})
+	},
+  teacher:function(e){
+    wx.navigateTo({
+      url: '/pages/teacher/index',
+    })
+  },
+  checkboxChange:function(e){
+    console.log(e); 
+    var courses_str = e.detail.value; 
+    courses_str = courses_str.join(",");
+      
+    this.setData({
+      courses_str: courses_str
+    });
+  },
+  sub_form  : function (e) {
+      console.log(e);
+   
+      var r = e.detail.value;
+      var name = r.name;
+      var phone = r.phone;
+      var courses = r.courses;
+
+      if (!name) {
+        ui.showToast('请输入姓名!')
+        return;
+      }
+      if (!phone) {
+        ui.showToast('请输入电话!')
+        return;
+      }
+      if (!courses){
+        ui.showToast('请选择课程!')
+        return;
+      }
+      var url = app.globalData.HOST;
+      var self = this;
+      http.post({
+        url: `${url}joinTrainOp?phone=${phone}&name=${name}&courses=${courses}`,
+        obtainResponse: true,
+        success: (res) => {
+          console.log(res);
+          var result = res.data;
+          var status = result.status;
+          if (status == 1) {
+            ui.showToast(result.info);
+            self.setData({
+              name:'',
+              phone:''
+            })
+          } else {
+            ui.showToast(result.info);
+          }
+        }
+      })
+    }
+  }, { ...footer}))

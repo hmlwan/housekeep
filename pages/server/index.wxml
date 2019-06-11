@@ -1,6 +1,6 @@
 <!--强大服务网络-->
 <view class="top_logo flex_row">
-	<image class="l_logo" src='/images/find/logo.png'></image>
+	<image class="l_logo" src='{{IP}}{{CONFIG.web_logo}}'></image>
 	<image class='r_logo_icon' src= '/images/find/daohang.png'></image>
 </view>
 <!-- 背景 -->
@@ -11,50 +11,39 @@
 <!-- 强大服务网络 -->
 <view class='fwwl'>
 		<text class='fw_title'>强大服务网络</text>
-		<view class='fw_item flex_col'>
-				<text class='fw_name'>上海总公司</text>
+		<view class='fw_item flex_col' wx:for="{{company_list}}" wx:for-item="v"> 
+				<text class='fw_name'>{{v.name}}</text>
 				<view>
 						<label>地址：</label>
-						<text>上海市浦东新区东方路738号裕安大厦804室</text>
+						<text>{{v.address}}</text>
 				</view>
 				<view>
 						<label>联系：</label>
-						<text>佳佳老师 </text>
+						<text>{{v.contact}} </text>
 				</view>
-				<text>18616376372（微信同步）</text>
+				<text>{{v.phone}}</text>
 		</view>
-		<view class='fw_item flex_col'>
-				<text class='fw_name'>杭州分公司</text>
-				<view>
-						<label>地址：</label>
-						<text>杭州市萧山区市心北路192号大成名座1幢3单元3F</text>
-				</view>
-				<view>
-						<label>联系：</label>
-						<text>小熊老师 </text>
-				</view>
-				<text>17764584557（微信同步）</text>
-		</view>
+	
 </view>	
 
 <!-- 联系我们 -->
 <view class='lx flex_col'>
 		<text class='lx_head'>联系我们</text>
 		<text class='desc'>24小时服务热线</text>
-		<text class='lx_phone'>400-808-3353</text>
-		<text class='desc'>总部地址：上海市徐汇区徐虹北路3号2楼</text>
-		<image src="/images/find/wechat01.jpg"></image>
+		<text class='lx_phone'>{{CONFIG.tel}}</text>
+		<text class='desc'>总部地址：{{CONFIG.company_address}}</text>
+		<image src="{{IP}}{{CONFIG.company_qrcode}}"></image>
 		<text class='lx_head'>立即预约</text>
-		<form bindsubmit="" bindreset="">
+		<form bindsubmit="sub_form" bindreset="">
 				<view class='input-form flex_row'>
 						<label>姓名：</label>
-						<input class='form-control' type="text"></input>				
+						<input class='form-control' value='{{name}}' name="name" type="text"></input>				
 				</view>
 				<view class='input-form flex_row'>
 						<label>电话：</label>
-						<input class='form-control' type="text"></input>
+						<input class='form-control' value='{{phone}}' name="phone" type="text"></input>
 				</view>
-				<button>提交</button>
+				<button form-type='submit'>提交</button>
 		</form>
 </view>
 <!-- 呵护 -->
@@ -71,7 +60,8 @@
 
 <!-- 站长统计 -->
 <view class='copyright flex_col'>
-		<text>Copyright © 2017 上海佳禾家庭服务有限公司 版权所有  沪ICP备12048079号</text>
-		<text>技术支持：雪中行者</text>
+		<text>{{CONFIG.copyright}}</text>
+		<text>技术支持：{{CONFIG.technical_support}}</text>
 </view>
-
+<!-- footer悬浮 -->
+<include src="../common/footer.wxml" />

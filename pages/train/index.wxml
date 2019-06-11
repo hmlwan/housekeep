@@ -1,7 +1,7 @@
 <!--我要培训-->
 <!--头部logo-->
 <view class="top_logo flex_row">
-	<image class="l_logo" src='/images/find/logo.png'></image>
+	<image class="l_logo" src='{{IP}}{{CONFIG.web_logo}}'></image>
 	<image class='r_logo_icon' src= '/images/find/daohang.png'></image>
 </view>
 <!-- 背景 -->
@@ -11,75 +11,37 @@
 <!-- 种类 -->
 <view class='trian_type flex_row'>
 		<text class='active'>培训科目</text>
-		<text>师资力量</text>
-		<text>证书查询</text>
+		<text bindtap='teacher'>师资力量</text>
+		<!-- <text>证书查询</text> -->
 </view>
 <!-- 类别 -->
 <view class='train_cate flex_col'>
-		<view class='train_item flex_col'>
-				<image src='/images/train/train_1.jpg'></image>
-				<text class='train_title'>母婴护理培训（月嫂）</text>
-				<text>月嫂是爱心行业，更是朝阳产业，加强月子护理的意识，可以帮助新妈妈的身体良好康复，有利于宝宝的健康成长。课程主要包括针对产妇产褥期的护理常识，以及新生儿科学的喂养及</text>
-		</view>
-		<view class='train_item flex_col'>
-				<image src='/images/train/train_2.jpg'></image>
-				<text class='train_title'>育婴师培训</text>
-				<text>我们的育婴师是主要从事0--3岁婴幼儿生活照料、生活卫生保健与护理、心理、营养及教 育（动作技能、智能开发、社会行为及人格培养）等方面的专业服务人员，为广大婴幼儿家庭提供</text>
-		</view>
-		<view class='train_item flex_col'>
-				<image src='/images/train/train_3.jpg'></image>
-				<text class='train_title'>催乳培训</text>
-				<text>催乳师是从事产褥期妇女乳房护理和乳房保健，通过专业手法和技巧，排除或减轻产妇容易出现乳房胀痛，乳汁淤积，乳腺管堵塞等引起乳汁分泌不畅的症状，催乳包括，对产妇进行心 </text>
+		<view class='train_item flex_col' wx:for="{{course_list}}" wx:for-item="v">
+				<image src='{{IP}}{{v.course_img}}'></image>
+				<text class='train_title'>{{v.course_name}}培训</text>
+				<text>{{v.introduce}}</text>
 		</view>
 </view>
 <!-- 加载更多 -->
-<view class="load_more">加载更多</view>
+<!-- <view class="load_more">加载更多</view> -->
 
 <!--选课专区 -->
 <view class='xk flex_col'>
-		<form bindsubmit='' bindreset=''>
-			
+		<form bindsubmit='sub_form' bindreset=''>
+    <input name="courses" value='{{courses_str}}'   hidden='true'></input>
 				<view class='input-form flex_col'>
 						<text>选课专区</text>
-						<input class='form-control' type="text" placeholder='姓名'></input>
-						<input class='form-control' type="text" placeholder='手机号'></input>
+						<input class='form-control' value='{{name}}' name="name" type="text" placeholder='姓名'></input>
+						<input class='form-control' value='{{phone}}' name="phone" type="text" placeholder='手机号'></input>
 				</view>	
 				<view class='input-form'>
 					<text>意向课程</text>
 					<view>(可多选)</view>
-					<checkbox-group bindchange=''>
+					<checkbox-group bindchange='checkboxChange'>
 							<view class='flex_row chose_item'>
-									<label class="checkbox">
-											<checkbox checked='true' color="#000"></checkbox>
-												母婴护理
-									</label>
-									<label class="checkbox">
-											<checkbox checked='true'></checkbox>
-												小儿推拿
-									</label>
-									<label class="checkbox">
-											<checkbox checked='true'></checkbox>
-												高级育婴
-									</label>
-									<label class="checkbox">
-											<checkbox checked='true'></checkbox>
-												管家
-									</label>
-									<label class="checkbox">
-											<checkbox checked='true'></checkbox>
-												涉外英语
-									</label>
-									<label class="checkbox">
-											<checkbox checked='true'></checkbox>
-												催乳
-									</label>
-									<label class="checkbox">
-											<checkbox checked='true'></checkbox>
-												科学月子餐
-									</label>
-									<label class="checkbox">
-											<checkbox checked='true'></checkbox>
-												蒙氏早教
+									<label class="checkbox"  wx:for="{{course_list}}" wx:for-item="vo">
+											<checkbox value='{{vo.id}}' color="#000"></checkbox>
+												{{vo.course_name}}
 									</label>
 							</view>	
 					</checkbox-group>
@@ -89,12 +51,10 @@
 
 </view>
 
-
-
 <!-- 站长统计 -->
 <view class='copyright flex_col'>
-		<text>Copyright © 2017 上海佳禾家庭服务有限公司 版权所有  沪ICP备12048079号</text>
-		<text>技术支持：雪中行者</text>
+		<text>{{CONFIG.copyright}}</text>
+		<text>技术支持：{{CONFIG.technical_support}}</text>
 </view>
 <!-- footer悬浮 -->
 <include src="../common/footer.wxml" />

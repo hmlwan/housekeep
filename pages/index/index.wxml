@@ -13,7 +13,7 @@
 </view> -->
 <view class="index_con">
 	<view class="index_top_bkg">
-		<image src="/images/main/main.png"></image>
+		<image src="{{IP}}{{CONFIG.main_logo}}"></image>
 	</view> 
 	<view class='index_menu'> 
 		<view class='index_item' bindtap='jhfw'>

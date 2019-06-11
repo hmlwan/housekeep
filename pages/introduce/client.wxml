@@ -2,15 +2,16 @@
 <view class='client_bkg'>
     <image src='/images/main/kehu_img.jpg'></image>
     <view class='client_con flex_col'>
-        <form class='tj_form flex_col'>
-            <input placeholder='请输入客户姓名' type="text" ></input>
-            <input placeholder='请输入客户电话' type="number" ></input>
-            <input placeholder='请输入推荐人姓名' type="text" ></input>
-            <input placeholder='请输入推荐人电话' type="number" ></input>
-            <input placeholder='请输入推荐人微信' type="text" ></input>
-            <input placeholder='请输入推荐人支付宝账号' type="number" ></input>
-             <input placeholder='请输入推荐人银行账号' type="number" ></input>
-            <button class='tj_btn' form-type="submit">提交信息</button>
+        <form class='tj_form flex_col' bindsubmit="sub_form" bindreset="formReset">
+            <input type="text" name='type' hidden='true' value='1'></input>
+            <input placeholder='请输入客户姓名' type="text"  name="train_name"></input>
+            <input placeholder='请输入客户电话' type="number" name="train_phone"></input>
+            <input placeholder='请输入推荐人姓名' type="text" name="recommend_name" ></input>
+            <input placeholder='请输入推荐人电话' type="number" name="recommend_phone" ></input>
+            <input placeholder='请输入推荐人微信' type="text" name="recommend_wx"></input>
+            <input placeholder='请输入推荐人支付宝账号' type="number" name="recommend_zfb"></input>
+             <input placeholder='请输入推荐人银行账号' type="number" name="recommend_bank" ></input>
+            <button class='tj_btn' form-type="submit" open-type="getUserInfo" bindgetuserinfo="getUserInfo">提交信息</button>
         </form>
     </view>
 </view>

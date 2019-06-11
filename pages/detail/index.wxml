@@ -1,94 +1,108 @@
 <!--阿姨详情-->
 <!--头部logo-->
 <view class="top_logo flex_row">
-	<image class="l_logo" src='/images/find/logo.png'></image>
+	<image class="l_logo" src='{{IP}}{{CONFIG.web_logo}}'></image>
 	<image class='r_logo_icon' src= '/images/find/daohang.png'></image>
 </view>
+<!-- 弹窗 遮罩 --> 
+<view class='zhezao' hidden="{{is_show}}">
+	<view class='pop_up'>
+				<view class='pop_ip_bkg flex_row'>
+					<image src='{{IP}}{{CONFIG.web_logo}}'></image>
+					<image class='sc_btn'  bindtap='cancel'  src='/images/main/shanchu.png'></image>
+				</view>
+        <form bindsubmit="formSubmit" bindreset="formReset">
+            <input type='text' name="task_id" value="{{task_id}}" hidden='true'></input>
+            <view class='flex_row pop_up_item' >
+						<label>姓名：</label>
+              <input placeholder='请输入您的姓名' type="text" name="name"></input>
+            </view>
+            <view class='flex_row pop_up_item'>
+                <label>电话：</label>
+                <input placeholder='请输入您的手机号' type="text" name="phone"></input>
+            </view>
+            <button class='pop_sub' form-type="submit">提交</button>
 
+        </form>
+			
+		</view>
+</view>
 <view class='detail_bkg'>
 			<view class='detail_con'>
 					<!-- 阿姨头像 -->
 					<view class='ayi_bgk flex_col'>
-							<image class='ayi_head' src='/images/detail/detail_1.jpg'></image>
-							<text class='ayi_name'>于阿姨</text>
+							<image class='ayi_head' src='{{IP}}{{ai_info.head_img}}'></image>
+							<text class='ayi_name'>{{ai_info.name}}</text>
 					</view>
 					<!-- 阿姨简历 -->
 					<view class='resume'>
 							<view class='resume_item'>
 									<label>资格证：</label>
-									<text>身份证/健康证/母婴护理证/高级育婴证/催乳师证/小儿推拿证/产后康复/营养月子餐证</text>
+									<text>{{ai_info.certificate}}</text>
 							</view>
 							<view class='resume_item'>
 									<label>经验：</label>
-									<text>3年</text>
+									<text>{{ai_info.work_years}}</text>
 							</view>
 							<view class='resume_item'>
 									<label>户籍：</label>
-									<text>上海</text>
+									<text>{{ai_info.place}}</text>
 							</view>
 							<view class='resume_item'>
 									<label>语言能力：</label>
-									<text>普通话</text>
+									<text>{{ai_info.lang}}</text>
 							</view>
 							<view class='resume_item'>
 									<label>年龄：</label>
-									<text>42</text>
+									<text>{{ai_info.age}}</text>
 							</view>
 							<view class='resume_item'>
 									<label>属相：</label>
-									<text>龙</text>
+									<text>{{ai_info.zodiac}}</text>
 							</view>
 							<view class='resume_item'>
 									<label>学历：</label>
-									<text>高中</text>
+									<text>{{ai_info.edu}}</text>
 							</view>
 							<view class='resume_item'>
 									<label>区域：</label>
-									<text>不限</text>
+									<text>{{ai_info.area}}</text>
 							</view>
 					</view>
           <!-- 工作经历 -->
           <view class='work flex_col clearfix'>
               <view class='work_item flex_row'>
                   <label>工作经历</label>
-                  <text>2017-2018 在上海某月子会所照顾新生儿</text>
+                  <text>{{ai_info.work_exp}}</text>
               </view>
               <view class='work_item flex_row'>
                   <label>专业技能</label>
-                  <text>做饭/保洁/照顾新生儿/抚触被动操</text>
+                  <text>{{ai_info.work_skill}}</text>
               </view>
               <view class='work_item flex_row'>
                   <label>自我评价</label>
-                  <text>阿姨从事月嫂育婴多年，实践操作经验丰厚，擅长辅助调理产妇心理，能合理安排月子期间的大小事宜。对紧急事件能做到妥善调谐，做事情认真，有责任心，爱心，懂得煲汤养生，推拿按摩。善于辅助产妇月子后的形体恢复，深受东家信赖好评。</text>
+                  <text>{{ai_info.evaluate}}</text>
               </view>
           </view>
 
 					<!-- 生活照片 -->
 					<view class='life flex_col'>
 							<text>生活照片</text>
-							<image src='/images/detail/ayi_1.jpg'></image>
+							<image src='{{IP}}{{ai_info.life_img}}'></image>
 					</view>
 
 		</view>
 </view>	
 <!-- 立即预约 -->
 <view class='sub_btn'>
-		<button>立即预约</button>
+		<button bindtap='yuyueBtn' data-id="{{ai_info.id}}">立即预约</button>
 </view>	
 
 
 <!-- 站长统计 -->
 <view class='copyright flex_col '>
-		<text>Copyright © 2017 上海佳禾家庭服务有限公司 版权所有  沪ICP备12048079号</text>
-		<text>技术支持：雪中行者</text>
+	  <text>{{CONFIG.copyright}}</text>
+		<text>技术支持：{{CONFIG.technical_support}}</text>
 </view>
 <!-- footer悬浮 -->
-<view class='footer_flex'>
-		<view class='footer_item flex_row'>
-				<image src='/images/find/001zx.png'></image>
-				<image src='/images/find/004zx.png'></image>
-				<image src='/images/find/003zx.png'></image>
-				<image src='/images/find/002zx.png'></image>
-		</view>
-</view>
-
+<include src="../common/footer.wxml" />

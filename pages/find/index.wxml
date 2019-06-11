@@ -1,6 +1,6 @@
 <!--头部logo-->
 <view class="top_logo flex_row">
-	<image class="l_logo" src='/images/find/logo.png'></image>
+	<image class="l_logo" src='{{IP}}{{CONFIG.web_logo}}'></image>
 	<image class='r_logo_icon' src= '/images/find/daohang.png'></image>
 </view>
 <!-- 头图 -->
@@ -12,6 +12,7 @@
 	<text>8000+家庭的口碑见证</text>
 	<text>每一幅温馨的画面,每一句真诚的赞赏,每一个幸福的笑容,都是我们温柔前进的动力,也是佳禾珍贵的财富。</text>
 </view>
+
 <!-- 评价 -->
 <view class='pinlun_list'>
 	 <image src='/images/find/pinlun_1.jpg'></image>
@@ -25,53 +26,35 @@
 			<view class='job_type_con'>
 					<text class='job_type_title'>工作类型:</text>
 					<view class='job_type_item'>
-							<text class="active">全部</text>
-							<text>育婴师</text>
-							<text>月嫂</text>
-							<text>保姆</text>
-							<text>管家</text>
-							<text>家庭早教师</text>
-							<text>菲佣</text>
+							<text class="{{active_type_id==''?'active':''}}" data-type_id="" bindtap='changeType'>全部</text>
+							<text  wx:for="{{type_list}}" wx:key="unique" wx:for-item="vo" class="{{active_type_id==vo.type_id?'active':''}}" data-type_id="{{vo.type_id}}" bindtap='changeType'>{{vo.type_name}}</text>
 					</view>
 			</view>
-			<view class="jober_list">
+			<view class="jober_list" wx:for="{{ai_list}}" wx:for-item="v">
 					<view class="jober_item">
 							<image src='/images/find/ayi_1.jpg'></image>
 							<view class='ayi_detail'>
-									<text class='name'>陈阿姨</text>
-									<text class='address'>1986年 | 湖北人 | 属虎</text>
-									<text class='years'>3-5年</text>
+									<text class='name'>{{v.name}}</text>
+									<text class='address'>{{v.birth}} | {{v.place}} | {{v.zodiac}}</text>
+									<text class='years'>{{v.work_years}} </text>
 							</view>
 							<view class='ayi_exp'>
-									<text class="cert">资质证书：身份证/健康证/高级育婴证/早教证/小儿推拿证/厨师证/高级管家证</text>
-									<text class='work_addr'>2014-2016  上海   江苏家庭  4口之家  100平方  专带10个月宝宝</text>
-									<text class='work_addr'>2016-2017  上海  上海家庭  3口之家  90平方    专带1岁宝宝</text>	
+									<text class="cert">资质证书：{{v.certificate}}</text>
+									<text class='work_addr'>{{v.work_exp}}</text>
+									<!-- <text class='work_addr'>2016-2017  上海  上海家庭  3口之家  90平方    专带1岁宝宝</text>	 -->
 							</view>
-							<view class="detail_button">了解详情</view>
+							<view class="detail_button" data-id="{{v.id}}" bindtap='knowDetail'>了解详情</view>
 					</view>
-					<view class="jober_item">
-							<image src='/images/find/ayi_1.jpg'></image>
-							<view class='ayi_detail'>
-									<text class='name'>陈阿姨</text>
-									<text class='address'>1986年 | 湖北人 | 属虎</text>
-									<text class='years'>3-5年</text>
-							</view>
-							<view class='ayi_exp'>
-									<text class="cert">资质证书：身份证/健康证/高级育婴证/早教证/小儿推拿证/厨师证/高级管家证</text>
-									<text class='work_addr'>2014-2016  上海   江苏家庭  4口之家  100平方  专带10个月宝宝</text>
-									<text class='work_addr'>2016-2017  上海  上海家庭  3口之家  90平方    专带1岁宝宝</text>	
-							</view>
-							<view class="detail_button">了解详情</view>
-					</view>
+				
 			</view>
 		</view>	
-		<view class="load_more">加载更多</view>
+		<!-- <view class="load_more">加载更多</view> -->
 </view>
 
 <!-- 家务助理 -->
 <view class='bjws'>
 		<view class="bjws_top">
-				<text class="bjws_title">佳禾家务助理-家庭保洁卫士</text>
+				<text class="title">佳禾家务助理-家庭保洁卫士</text>
 				<text class='bjws_desc desc'>负责买菜、家庭管理合理安排家庭生活、打扫家庭卫生、清洗、晾晒、熨烫、整理衣物、宠物照料</text>
 				<image src="/images/find/baojie.jpg"></image>
 		</view>
@@ -109,22 +92,10 @@
 				<text class='title'>特色服务内容</text>
 				<text class='desc'>帮助妈妈安全科学育儿</text>
 		</view>
-		<view class='spec_bgk flex_row'>
-				<view class='spec_item flex_col'>
-						<image src='/images/find/baby_1.png'></image>
-						<text>起居照顾</text>
-				</view>
-				<view class='spec_item flex_col'>
-						<image src='/images/find/baby_1.png'></image>
-						<text>起居照顾1</text>
-				</view>
-					<view class='spec_item flex_col'>
-						<image src='/images/find/baby_1.png'></image>
-						<text>起居照顾3</text>
-				</view>
-					<view class='spec_item flex_col'>
-						<image src='/images/find/baby_1.png'></image>
-						<text>起居照顾4</text>
+		<view class='spec_bgk flex_row' >
+				<view class='spec_item flex_col' wx:for="{{special_list}}" wx:for-item="s">
+						<image src='{{IP}}{{s.img}}'></image>
+						<text>{{s.name}}</text>
 				</view>
 		</view>
 </view>
@@ -133,20 +104,20 @@
 <view class='lx flex_col'>
 		<text class='lx_head'>联系我们</text>
 		<text class='desc'>24小时服务热线</text>
-		<text class='lx_phone'>400-808-3353</text>
-		<text class='desc'>总部地址：上海市徐汇区徐虹北路3号2楼</text>
-		<image src="/images/find/wechat01.jpg"></image>
+		<text class='lx_phone'>{{CONFIG.tel}}</text>
+		<text class='desc'>总部地址：{{CONFIG.company_address}}</text>
+		<image src="{{IP}}{{CONFIG.company_qrcode}}"></image>
 		<text class='lx_head'>立即预约</text>
-		<form bindsubmit="" bindreset="">
+		<form bindsubmit="sub_form" bindreset="sub_form">
 				<view class='input-form flex_row'>
 						<label>姓名：</label>
-						<input class='form-control' type="text"></input>				
+						<input class='form-control' placeholder='请输入您的姓名' value='{{name}}' name="name" type="text"></input>				
 				</view>
 				<view class='input-form flex_row'>
 						<label>电话：</label>
-						<input class='form-control' type="text"></input>
+						<input class='form-control'  placeholder='请输入您的电话' value='{{phone}}' name="phone" type="text"></input>
 				</view>
-				<button>提交</button>
+				<button form-type='submit'>提交</button>
 		</form>
 </view>
 <!-- 呵护 -->
@@ -163,15 +134,8 @@
 
 <!-- 站长统计 -->
 <view class='copyright flex_col'>
-		<text>Copyright © 2017 上海佳禾家庭服务有限公司 版权所有  沪ICP备12048079号</text>
-		<text>技术支持：雪中行者</text>
+		<text>{{CONFIG.copyright}}</text>
+		<text>技术支持：{{CONFIG.technical_support}}</text>
 </view>
 <!-- footer悬浮 -->
-<view class='footer_flex'>
-		<view class='footer_item flex_row'>
-				<image src='/images/find/001zx.png'></image>
-				<image src='/images/find/004zx.png'></image>
-				<image src='/images/find/003zx.png'></image>
-				<image src='/images/find/002zx.png'></image>
-		</view>
-</view>
+<include src="../common/footer.wxml" />

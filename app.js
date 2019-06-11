@@ -1,6 +1,23 @@
 //app.js
+const ui = require("utils/ui.js");
+const http = require("utils/http.js"); 
+
 App({
   onLaunch: function () {
+    var url = this.globalData.HOST;
+    var self = this;
+    http.post({
+      url: `${url}getSysInfo`,
+      obtainResponse: true,
+      success: (res) => {
+        console.log(res);
+        var result = res.data;
+        var status = result.status;
+        if (status == 1) {
+          self.globalData.CONFIG = result.data;
+        } 
+      }
+    });
     // 展示本地存储能力
     var logs = wx.getStorageSync('logs') || []
     logs.unshift(Date.now())
@@ -34,7 +51,9 @@ App({
     })
   },
   globalData:{
-    HOST:"http://www.housekeep_sys.com/admin/Api/"
+    IP:"http://www.housekeep_sys.com",
+    HOST:"http://www.housekeep_sys.com/admin/Api/",
+    userInfo:null
   }
 
 	

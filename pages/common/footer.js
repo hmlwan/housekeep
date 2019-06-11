@@ -1,4 +1,5 @@
 //在线客服
+
 function kefu(){
     wx.makePhoneCall({
       phoneNumber: '',
@@ -12,13 +13,13 @@ function yuyue () {
 }
 // 我要培训
 function peixun() {
-    wx.redirectTo({
+  wx.navigateTo({
       url: '/pages/train/index',
     })
 }
 // 返回首页
 function fanhui() {
-    wx.redirectTo({
+    wx.navigateTo({
       url: '/pages/main/index',
     })
 }

@@ -1,5 +1,10 @@
 // pages/teacher/detail.js
-Page({
+var footer = require("../common/footer.js");
+const ui = require("../../utils/ui.js");
+const http = require("../../utils/http.js");
+var app = getApp();
+Page(
+  Object.assign({
 
 	/**
 	 * 页面的初始数据
@@ -12,7 +17,11 @@ Page({
 	 * 生命周期函数--监听页面加载
 	 */
 	onLoad: function (options) {
-
+    wx.hideLoading();
+    this.setData({
+      CONFIG: app.globalData.CONFIG,
+      IP: app.globalData.IP,
+    });
 	},
 
 	/**
@@ -63,4 +72,4 @@ Page({
 	onShareAppMessage: function () {
 
 	}
-})
+},{...footer}))
