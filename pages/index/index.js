@@ -1,7 +1,6 @@
 //index.js
 //获取应用实例
-// var app = getApp();
-var app = getApp();
+const app = getApp();
 Page({
   data: {
     motto: 'Hello World',
@@ -16,11 +15,22 @@ Page({
     })
   },
   onLoad: function () {
+    
+    if (app.globalData.CONFIG){
+      console.log(1);
+      console.log('第一次回调', app.globalData.CONFIG);
+
+    }else{
+      console.log(2);
+      app.getCallback = () => {
+        console.log('再次回调', app.globalData.CONFIG);
+        this.setData({
+          CONFIG: app.globalData.CONFIG,
+          IP: app.globalData.IP,
+        });
+      }
+    };
     wx.hideLoading();
-    this.setData({
-      CONFIG: app.globalData.CONFIG,
-      IP: app.globalData.IP,
-    });
     
     if (app.globalData.userInfo) {
       console.log(33);

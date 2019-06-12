@@ -8,13 +8,13 @@
 </view>
 
 <view class='tea_item'>
-				<image src='/images/teacher/teacher_1.jpg'></image>
-				<view class='tea_con flex_col'>
-						<text class='name'>李慧茹</text>
-						<text class='position'>培训部主管</text>
-						<text class='detail'>毕业于杭州医学院康复治疗专业，主修儿童康复医学、儿童心理学、0-6岁儿童行为智力水平发育评估、语言训练、感觉统合训练等，持有国家职业鉴定保健按摩师四级、蒙台梭利亲毕业于杭州医学院康复治疗专业，主修儿童康复医学、儿童心理学、0-6岁儿童行为智力水平发育评估、语言训练、感觉统合训练等，持有国家职业鉴定保健按摩师四级、蒙台梭利亲</text>
-				</view>
-		</view>
+    <image src='/images/teacher/teacher_1.jpg'></image>
+    <view class='tea_con flex_col'>
+        <text class='name'>李慧茹</text>
+        <text class='position'>培训部主管</text>
+        <text class='detail'>毕业于杭州医学院康复治疗专业，主修儿童康复医学、儿童心理学、0-6岁儿童行为智力水平发育评估、语言训练、感觉统合训练等，持有国家职业鉴定保健按摩师四级、蒙台梭利亲毕业于杭州医学院康复治疗专业，主修儿童康复医学、儿童心理学、0-6岁儿童行为智力水平发育评估、语言训练、感觉统合训练等，持有国家职业鉴定保健按摩师四级、蒙台梭利亲</text>
+    </view>
+</view>
 
 
 <!-- 站长统计 -->
