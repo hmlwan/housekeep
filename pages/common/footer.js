@@ -1,8 +1,9 @@
 //在线客服
+var app = getApp();
 
 function kefu(){
     wx.makePhoneCall({
-      phoneNumber: '',
+      phoneNumber: app.globalData.CONFIG.tel
     })
 }
 //在线预约

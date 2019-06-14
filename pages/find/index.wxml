@@ -3,6 +3,10 @@
 	<image class="l_logo" src='{{IP}}{{CONFIG.web_logo}}'></image>
 	<image class='r_logo_icon' src= '/images/find/daohang.png'></image>
 </view>
+<!-- 授权遮罩 -->
+<block wx:if="{{!hasUserInfo && canIUse}}" >
+  <button class="click_imitate" open-type='getUserInfo' bindgetuserinfo="getUserInfo" ></button>
+</block>
 <!-- 头图 -->
 <view class="top_bgk">
 	<image src='/images/find/yuyue_top.jpg'></image>
@@ -32,7 +36,7 @@
 			</view>
 			<view class="jober_list" wx:for="{{ai_list}}" wx:for-item="v">
 					<view class="jober_item">
-							<image src='/images/find/ayi_1.jpg'></image>
+							<image src='{{IP}}{{v.life_img}}'></image>
 							<view class='ayi_detail'>
 									<text class='name'>{{v.name}}</text>
 									<text class='address'>{{v.birth}} | {{v.place}} | {{v.zodiac}}</text>
@@ -131,6 +135,8 @@
 		</view>	
 </view>
 </view>
+
+
 
 <!-- 站长统计 -->
 <view class='copyright flex_col'>

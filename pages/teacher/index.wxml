@@ -6,7 +6,7 @@
 </view>
 <!-- 背景 -->
 <view class='top_bkg'>
-		<image src='/images/train/train_bgk.png'></image>
+		<image src='{{IP}}{{CONFIG.train_bkg_img}}'></image>
 </view>
 <!-- 种类 -->
 <view class='trian_type flex_row'>

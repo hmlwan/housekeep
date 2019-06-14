@@ -42,12 +42,12 @@ App({
           wx.getUserInfo({
             success: res => {
               // 可以将 res 发送给后台解码出 unionId
-              this.globalData.userInfo = res.userInfo
-
+              self.globalData.userInfo = res.userInfo
+              console.log(res.userInfo);
               // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
               // 所以此处加入 callback 以防止这种情况
-              if (this.userInfoReadyCallback) {
-                this.userInfoReadyCallback(res)
+              if (self.userInfoReadyCallback) {
+                self.userInfoReadyCallback(res)
               }
             }
           })
@@ -58,6 +58,8 @@ App({
   globalData: {
     IP: "http://www.housekeep_sys.com",
     HOST: "http://www.housekeep_sys.com/admin/Api/",
+    APPID:"wxfac178567fcd21ee",
+    SECRET:"89a6daffd13c04b6cc6840b7163cf8e6",
     userInfo: null
   }
 

@@ -16,7 +16,10 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-   
+    this.setData({
+      CONFIG: app.globalData.CONFIG,
+      IP: app.globalData.IP,
+    });
 
     if (!(app.globalData.userInfo)) {
       wx.getSetting({
@@ -132,7 +135,6 @@ Page({
       return;
     }
     var url = app.globalData.HOST;
-
     http.post({
       url: `${url}subRecommendData?train_name=${train_name}&train_phone=${train_phone}&recommend_name=${recommend_name}&recommend_phone=${recommend_phone}&recommend_wx=${recommend_wx}&recommend_zfb=${recommend_zfb}&recommend_bank=${recommend_bank}&type=${type}&open_id=${open_id}&op_name=${op_name}`,
       obtainResponse: true,
@@ -172,7 +174,6 @@ Page({
           success: function (res) {
             var openid = res.data.openid; //返回openid
             app.globalData.userInfo.openid = openid;
-
           }
         })
       }

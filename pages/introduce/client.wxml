@@ -1,6 +1,6 @@
 <!--推荐客户-->
 <view class='client_bkg'>
-    <image src='/images/main/kehu_img.jpg'></image>
+    <image src='{{IP}}{{CONFIG.intro_client_img}}'></image>
     <view class='client_con flex_col'>
         <form class='tj_form flex_col' bindsubmit="sub_form" bindreset="formReset">
             <input type="text" name='type' hidden='true' value='1'></input>

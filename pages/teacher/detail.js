@@ -17,11 +17,34 @@ Page(
 	 * 生命周期函数--监听页面加载
 	 */
 	onLoad: function (options) {
+    console.log(options);
+    var id = options.id;
     wx.hideLoading();
     this.setData({
       CONFIG: app.globalData.CONFIG,
       IP: app.globalData.IP,
     });
+    var url = app.globalData.HOST;
+    var self = this;
+    http.post({
+      url: `${url}getTeacherDetail?id=${id}`,
+      obtainResponse: true,
+      success: (res) => {
+        console.log(res);
+        var result = res.data;
+        var status = result.status;
+        if (status == 1) {
+          var teacher_info = result.data;
+          self.setData({
+            teacher_info: teacher_info,
+          });
+        } else {
+          ui.showToast("接口获取失败");
+        }
+      }
+    })
+
+
 	},
 
 	/**

@@ -1,7 +1,7 @@
 <!--学员-->
 <view class='student_bkg'>
     <view class='student_con flex_col'>
-        <image src='/images/find/logo.png'></image>
+        <image src='{{IP}}{{CONFIG.intro_student_img}}'></image>
         <form class='tj_form flex_col' bindsubmit="sub_form" bindreset="formReset">
             <input type='text' hidden='true' name="type" value="2" ></input>
             <input placeholder='请输入培训学员姓名' type="text" name="train_name" ></input>

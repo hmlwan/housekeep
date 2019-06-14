@@ -14,27 +14,80 @@ Page(
 	 * 页面的初始数据
 	 */
 	data: {
-
+    hasUserInfo: false,
+    canIUse: wx.canIUse('button.open-type.getUserInfo')
 	},
 
 	/**
 	 * 生命周期函数--监听页面加载
 	 */
 	onLoad: function (options) {
-   
+    
+    wx.getSetting({
+      success: res => {
+        if (res.authSetting['scope.userInfo']) {
+          this.setData({
+            hasUserInfo: true
+          })
+        }
+      }
+    })
+
+
     var type_id ="";
     type_id = options.type_id;
     if (type_id ==undefined){
       type_id = '';
     }
-    console.log(type_id);
-      this.setData({
-        CONFIG: app.globalData.CONFIG ,
-        IP: app.globalData.IP,
-      });
+    this.setData({
+      CONFIG: app.globalData.CONFIG ,
+      IP: app.globalData.IP,
+    });
     wx.hideLoading();
     this.getAyiByJobList(type_id);
+
 	},
+  getUserInfo: function (e) {
+      app.globalData.userInfo = e.detail.userInfo;
+      this.setData({
+        hasUserInfo: true
+      });
+      wx.login({
+        //获取code
+        success: function (res) {
+          console.log(res);
+          var code = res.code; //返回code
+          var APPID = app.globalData.APPID;
+          var SECRET = app.globalData.SECRET;
+          wx.request({
+            url: 'https://api.weixin.qq.com/sns/jscode2session?appid=' + APPID + '&secret=' + SECRET + '&js_code=' + code + '&grant_type=authorization_code',
+            data: {},
+            header: {
+              'content-type': 'application/json'
+            },
+            success: function (res) {
+              var openid = res.data.openid; //返回openid
+              app.globalData.userInfo.openid = openid;
+
+
+              var url = app.globalData.HOST;
+              var username = app.globalData.userInfo.nickName;
+              var openid = app.globalData.userInfo.openid;
+              console.log(openid);
+              http.post({
+                url: `${url}saveMember?openid=${openid}&username=${username}&nick=${username}`,
+                obtainResponse: true,
+                success: (r) => {
+                  console.log(r);
+                }
+              })
+            }
+          })
+        }
+      });
+    },
+
+
 
 	/**
 	 * 生命周期函数--监听页面初次渲染完成

@@ -7,13 +7,13 @@
 <view class='scroll_image'>
 		<swiper autoplay="true" circular='true' indicator-dots='true' >
 			<swiper-item>
-					<image   bindtap='aboutCompany' src='/images/remain/scroll_img_1.jpg'></image>
+					<image   bindtap='aboutCompany' src='{{IP}}{{CONFIG.scroll_img_1}}'></image>
 			</swiper-item>
 			<swiper-item>
-					<image bindtap='train' src='/images/remain/scroll_img_2.jpg'></image>
+					<image bindtap='train' src='{{IP}}{{CONFIG.scroll_img_2}}'></image>
 			</swiper-item>
 				<swiper-item>
-					<image bindtap='subCompany' src='/images/remain/scroll_img_3.jpg'></image>
+					<image bindtap='subCompany' src='{{IP}}{{CONFIG.scroll_img_3}}'></image>
 			</swiper-item>
 		</swiper>
 </view>

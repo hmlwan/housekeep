@@ -1,6 +1,9 @@
 //index.js
 //获取应用实例
-const app = getApp();
+const ui = require("../../utils/ui.js");
+const http = require("../../utils/http.js");
+var app = getApp();
+
 Page({
   data: {
     motto: 'Hello World',
@@ -15,13 +18,13 @@ Page({
     })
   },
   onLoad: function () {
-    
+    console.log(app.globalData.userInfo);
     if (app.globalData.CONFIG){
-      console.log(1);
+
       console.log('第一次回调', app.globalData.CONFIG);
 
     }else{
-      console.log(2);
+      
       app.getCallback = () => {
         console.log('再次回调', app.globalData.CONFIG);
         this.setData({
@@ -30,29 +33,33 @@ Page({
         });
       }
     };
+
     wx.hideLoading();
-    
+
     if (app.globalData.userInfo) {
-      console.log(33);
+      console.log(1);
       this.setData({
         userInfo: app.globalData.userInfo,
         hasUserInfo: true
       })
     } else if (this.data.canIUse){
+      console.log(app.globalData.userInfo);
       // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
       // 所以此处加入 callback 以防止这种情况
       app.userInfoReadyCallback = res => {
         console.log(res);
+        app.globalData.userInfo = res.userInfo;
         this.setData({
           userInfo: res.userInfo,
           hasUserInfo: true
         })
       }
     } else {
+      console.log(3);
       // 在没有 open-type=getUserInfo 版本的兼容处理
       wx.getUserInfo({
         success: res => {
-          app.globalData.userInfo = res.userInfo
+          app.globalData.userInfo = res.userInfo;
           // this.setData({
           //   userInfo: res.userInfo,
           //   hasUserInfo: true
@@ -62,12 +69,43 @@ Page({
     }
   },
   getUserInfo: function(e) {
-    console.log(e)
-    app.globalData.userInfo = e.detail.userInfo
-    this.setData({
-      userInfo: e.detail.userInfo,
-      hasUserInfo: true
-    })
+      app.globalData.userInfo = e.detail.userInfo;
+      this.setData({
+        hasUserInfo: true
+      });
+      wx.login({
+        //获取code
+        success: function (res) {
+          console.log(res);
+          var code = res.code; //返回code
+          var APPID = app.globalData.APPID;
+          var SECRET = app.globalData.SECRET;
+          wx.request({
+            url: 'https://api.weixin.qq.com/sns/jscode2session?appid=' + APPID + '&secret=' + SECRET+'&js_code=' + code + '&grant_type=authorization_code',
+            data: {},
+            header: {
+              'content-type': 'application/json'
+            },
+            success: function (res) {
+              var openid = res.data.openid; //返回openid
+              app.globalData.userInfo.openid = openid;
+
+
+              var url = app.globalData.HOST;
+              var username = app.globalData.userInfo.nickName;
+              var openid = app.globalData.userInfo.openid;
+              console.log(openid);
+              http.post({
+                url: `${url}saveMember?openid=${openid}&username=${username}&nick=${username}`,
+                obtainResponse: true,
+                success: (r) => {
+                  console.log(r);
+                }
+              })
+            }
+          })
+        }
+      });
   },
   // 高单发布跳转
   gaodan:function(){
