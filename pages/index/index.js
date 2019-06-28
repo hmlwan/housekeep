@@ -78,32 +78,39 @@ Page({
         success: function (res) {
           console.log(res);
           var code = res.code; //返回code
-          var APPID = app.globalData.APPID;
-          var SECRET = app.globalData.SECRET;
-          wx.request({
-            url: 'https://api.weixin.qq.com/sns/jscode2session?appid=' + APPID + '&secret=' + SECRET+'&js_code=' + code + '&grant_type=authorization_code',
-            data: {},
-            header: {
-              'content-type': 'application/json'
-            },
-            success: function (res) {
-              var openid = res.data.openid; //返回openid
-              app.globalData.userInfo.openid = openid;
 
+          var url = app.globalData.HOST;
+          http.post({
+            url: `${url}getWxOpenId?code=${code}`,
+            obtainResponse: true,
+            success: (res) => {
+              console.log(res);
+              var result = res.data;
+              var status = result.status;
+            
+              if (status == 1) {
+                var openid = result.data; //返回openid
+                app.globalData.userInfo.openid = openid;
 
-              var url = app.globalData.HOST;
-              var username = app.globalData.userInfo.nickName;
-              var openid = app.globalData.userInfo.openid;
-              console.log(openid);
-              http.post({
-                url: `${url}saveMember?openid=${openid}&username=${username}&nick=${username}`,
-                obtainResponse: true,
-                success: (r) => {
-                  console.log(r);
-                }
-              })
+                var url = app.globalData.HOST;
+                var username = app.globalData.userInfo.nickName;
+                var openid = app.globalData.userInfo.openid;
+                console.log(openid);
+                http.post({
+                  url: `${url}saveMember?openid=${openid}&username=${username}&nick=${username}`,
+                  obtainResponse: true,
+                  success: (r) => {
+                    console.log(r);
+                  }
+                })
+              }else {
+                 ui.showToast("接口获取失败");
+              }
             }
           })
+
+
+    
         }
       });
   },
