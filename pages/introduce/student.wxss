@@ -2,7 +2,7 @@
 .student_bkg{
     width: 100%;
     height: auto;
-    background: linear-gradient(to right,#fb8200,#fca74d,#f99700,#fb8200,#fab54d)
+     background: linear-gradient(to right,#6c85fd,#768dfd,#899dfe,#8fa1fe,#95a6fe)
 }
 .student_con{
     width:80%;
@@ -20,7 +20,7 @@
     margin-bottom: 35rpx;
 }
 .tj_form .tj_btn{
-    background: linear-gradient(to right,#ed8138,#ef872e,#f69024,#f9990f,#fea106);
+    background: linear-gradient(to right,#6c85fd,#738afd,#7b91fd,#7088fd,#8196fd);
     width:85%;
     color:#fff;
     border-radius: 10rpx;

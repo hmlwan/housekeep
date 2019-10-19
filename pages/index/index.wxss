@@ -2,61 +2,61 @@
 
 
 .userinfo {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .index_con{
-	width: 100%;
-	height: 100%
+	  width: 100%;
+	  height: 100%
+}
+.index_top_bkg {
+    width: 100%;
+    background-color: #6882fc;
+    height: 180rpx;
+    position: relative;
+    margin-bottom: 220rpx;
 }
 
 .index_top_bkg image{
-	width: 100%;
-	height: 300rpx;
+	width: 90%;
+	height: 360rpx;
+  position: absolute;
+  top: 0;
+  left:5%;
+  z-index: 101;
+
 }
+.student_item{
+  width: 90%;
+  margin: 0 auto 40rpx;
+}
+.student_item image{
+  width: 100%;
+  height: 150rpx;
+}
+
 .index_menu{
-		flex-direction: row;
+		flex-wrap: wrap;
+    justify-content:space-between;
 		display: flex;
-		flex-grow:3;
-		margin-top: 10rpx;
-	  box-shadow: 0px 4px  10px  -6px #888888;
-		padding-bottom: 25rpx
+		flex-grow:2;
+    width: 90%;
+    margin: 10rpx auto
 }
 .index_item{ 
 	display: flex;
-	flex-direction: column;
-	width: 33.3%;
-	font-size: 28rpx;
-	align-items: center
+	flex-direction: wrap;
+	width: 48%;
+	align-items: center;
+  margin-bottom: 20rpx;
 }
 
 .index_item image{
-	width: 100rpx;
-	height: 100rpx;
+	width: 100%;
+	height: 200rpx;
 	margin-bottom: 10rpx;
 }
-
-.index_mid_con{
-	width: 100%
-}
-.index_mid_con  [class^='mid_item_']{
-	text-align: center;
-	font-size: 50rpx;
-	width: 94%;
-	margin: 30rpx auto 0;
-	padding: 100rpx 0;
-	color:#fff;
-	border-radius: 20rpx;
-}
-.index_mid_con .mid_item_1{
-	background: linear-gradient(to right,#ff900b,#ff7129,#ff5544,#ff3e59,#fd2377)
-	
-}
-.index_mid_con .mid_item_2{
-	background: linear-gradient(to right,#87c5f8,#6bb5f2,#54a8ee,#2d93e8,#1183e3)
-}
-
 
 
 
